@@ -10,13 +10,13 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Foundation",
-    path: "/about",
+    path: "/foundation-aisearchrefs",
     newTab: false,
   },
   {
     id: 3,
     title: "Blogs",
-    path: "/blog",
+    path: "/blogs",
     newTab: false,
   },
   {

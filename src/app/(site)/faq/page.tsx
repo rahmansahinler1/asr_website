@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import ScrollUp from "@/components/Common/ScrollUp";
+import Link from "next/link";
 
 const FAQPage = () => {
   return (
@@ -7,272 +8,296 @@ const FAQPage = () => {
       <ScrollUp />
       <Breadcrumb
         pageName="Frequently Asked Questions"
-        description="Learn about our AI-powered document analysis platform, intelligent search capabilities, and enterprise document management solutions"
+        description="Find answers to common questions about AI search tracking, brand monitoring, and our platform features"
       />
 
-      <section className="pt-[120px] pb-[120px] bg-primary">
+      <section className="pt-[120px] pb-[120px] bg-[#F5F5F5]">
         <div className="container">
           <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="mb-16 text-center">
+              <h1 className="mb-6 text-5xl font-bold leading-tight text-primary font-canela">
+                Frequently Asked <span className="text-[#FFD66B]">Questions</span>
+              </h1>
+              <p className="text-xl leading-relaxed text-primary/80 font-helvetica max-w-3xl mx-auto">
+                Everything you need to know about AI search tracking, brand monitoring, and optimizing your visibility in AI search engines.
+              </p>
+            </div>
+
             {/* Getting Started */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
                 Getting Started
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    What is Doclink?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/what-is-ai-search-refs" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    What is AI Search Refs?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Doclink is an AI-powered document analysis platform that helps you understand and extract insights from your documents. Upload your documents and interact with them through natural language queries.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    What types of documents can I analyze?
+                <Link 
+                  href="/faq/how-to-track-keywords" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    How do I track my brand keywords in AI search engines?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    We support various document formats including PDFs, Word documents, Excel spreadsheets, text files, and more. Our platform is designed to handle both simple text documents and complex formatted files.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How do I get started?
+                <Link 
+                  href="/faq/getting-started-guide" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    How do I get started with AI SEO tracking?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Simply sign up for an account, verify your email, and you can start uploading documents immediately. Our free tier allows you to test the platform's capabilities before committing to a paid plan.
-                  </p>
-                </div>
+                </Link>
               </div>
             </div>
 
-            {/* Technology and Innovation */}
+            {/* AI Search Engines */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
-                Our Technology
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
+                AI Search Engines
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    What is RAG technology and how do you use it?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/supported-ai-engines" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Which AI search engines do you support?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Retrieval-Augmented Generation (RAG) is a cutting-edge AI technology that combines powerful language models with precise information retrieval. We've implemented RAG from scratch to ensure accurate, context-aware document analysis. This means our AI provides answers strictly based on your documents, eliminating hallucinations and ensuring reliable information extraction.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How does your AI understand complex documents?
+                <Link 
+                  href="/faq/ai-seo-optimization" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    How can I optimize my content for AI search engines?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Our custom-built RAG implementation processes documents through multiple layers of analysis: semantic understanding, context mapping, and intelligent chunking. This allows us to maintain context across long documents and provide precise answers while understanding document structure, tables, and relationships between different sections.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    What makes your document analysis unique?
+                <Link 
+                  href="/faq/ai-search-ranking-factors" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    What are the key ranking factors for AI search engines?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Our platform combines enterprise-grade document processing with advanced semantic search capabilities. Using our proprietary RAG implementation, we can handle complex document structures, maintain context across large documents, and provide precise information retrieval with source attribution.
-                  </p>
-                </div>
+                </Link>
               </div>
             </div>
 
-            {/* Features and Usage */}
+            {/* Brand Monitoring */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
-                Features and Usage
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
+                Brand Monitoring
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How does the document chat work?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/brand-visibility-tracking" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    How does brand visibility tracking work?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    After uploading a document, you can ask questions naturally, as if you were talking to a knowledgeable assistant. Our AI analyzes your document and provides accurate answers based solely on the content within.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    Can I analyze multiple documents together?
+                <Link 
+                  href="/faq/competitor-analysis" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Can I monitor competitor performance in AI search?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Yes, you can create knowledge bases that combine multiple documents. This allows you to find connections and insights across your entire document collection.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    What is the maximum file size?
+                <Link 
+                  href="/faq/brand-mention-alerts" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Do you provide alerts for brand mentions?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Individual files can be up to 50MB. For larger documents, we recommend splitting them into smaller files or contacting our support for assistance.
-                  </p>
-                </div>
+                </Link>
               </div>
             </div>
 
-            {/* Document Intelligence */}
+            {/* Keyword Tracking */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
-                Document Intelligence
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
+                Keyword Tracking
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How does semantic search work in Doclink?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/keyword-tracking-setup" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    How do I set up keyword tracking?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Our semantic search capabilities go beyond keyword matching. Using advanced natural language processing, we understand the context and meaning of your queries, delivering relevant results even when exact terms don't match.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    Can Doclink analyze relationships between documents?
+                <Link 
+                  href="/faq/keyword-performance-metrics" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    What metrics do you track for keyword performance?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Yes, our platform uses advanced document intelligence to identify connections, similarities, and relationships across your document collection. This enables knowledge discovery and helps surface relevant information across your entire document library.
-                  </p>
-                </div>
+                </Link>
+
+                <Link 
+                  href="/faq/keyword-recommendations" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Do you provide keyword recommendations?
+                  </h3>
+                </Link>
               </div>
             </div>
 
-            {/* Security and Privacy */}
+            {/* Platform Features */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
-                Security and Privacy
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
+                Platform Features
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How secure are my documents?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/reporting-dashboard" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    What does the reporting dashboard include?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    We use enterprise-grade encryption (AES-256) for all stored documents and TLS 1.3 for data in transit. Our security practices align with ISO 27001 standards, ensuring your data remains protected.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    Can other users see my documents?
+                <Link 
+                  href="/faq/api-integration" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Do you offer API integration?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    No, your documents are private and can only be accessed by you and users you explicitly share them with. We maintain strict access controls and isolation between user accounts.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    Do you use my documents to train AI models?
+                <Link 
+                  href="/faq/data-export" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Can I export my tracking data?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    No, we do not use your documents to train our AI models. Your content is only used to provide you with analysis and insights through our platform.
-                  </p>
-                </div>
+                </Link>
               </div>
             </div>
 
-            {/* Enterprise Solutions */}
+            {/* Pricing & Plans */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
-                Enterprise Solutions
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
+                Pricing & Plans
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How can Doclink help with knowledge management?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/pricing-plans" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    What pricing plans do you offer?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Our platform transforms enterprise document management by creating an intelligent knowledge base from your existing documents. Through advanced document processing and semantic analysis, we make your organizational knowledge searchable, accessible, and actionable.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    Do you support document workflow automation?
+                <Link 
+                  href="/faq/free-trial" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Do you offer a free trial?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Yes, our platform includes intelligent document workflow features, automated information extraction, and integration capabilities to streamline your document processes. This includes automated categorization, data extraction, and custom workflow triggers.
-                  </p>
-                </div>
-              </div>
-            </div>
+                </Link>
 
-            {/* Billing and Plans */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
-                Billing and Plans
-              </h2>
-              
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    What's included in the free tier?
-                  </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    The free tier includes 10 sources, 3 folders, and a daily limit of 10 questions. This allows you to thoroughly test our platform's capabilities.
-                  </p>
-                </div>
-
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
+                <Link 
+                  href="/faq/plan-changes" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
                     Can I upgrade or downgrade my plan anytime?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Yes, you can change your plan at any time. Plan changes take effect immediately, and we'll prorate any charges or credits accordingly.
-                  </p>
-                </div>
+                </Link>
               </div>
             </div>
 
-            {/* Support */}
+            {/* Technical Support */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-8">
+              <h2 className="text-3xl font-bold text-black mb-8 font-canela">
                 Support
               </h2>
               
-              <div className="space-y-6">
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    How can I get help if I have issues?
+              <div className="space-y-4">
+                <Link 
+                  href="/faq/technical-support" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    How can I get technical support?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    You can contact our support team through the Support section.
-                  </p>
-                </div>
+                </Link>
 
-                <div className="border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                    Do you offer custom solutions?
+                <Link 
+                  href="/faq/implementation-help" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Do you provide implementation assistance?
                   </h3>
-                  <p className="text-base text-body-color dark:text-body-color-dark">
-                    Yes, our Enterprise plan offers custom solutions, including dedicated support, custom integrations, and specific feature development. Contact our sales team to discuss your needs.
-                  </p>
-                </div>
+                </Link>
+
+                <Link 
+                  href="/faq/custom-solutions" 
+                  className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
+                >
+                  <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
+                    Do you offer custom enterprise solutions?
+                  </h3>
+                </Link>
               </div>
             </div>
 
-            {/* Updated Contact Section with Technical Support */}
-            <div className="mt-12 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
-                Need Technical Support?
+            {/* Contact Section */}
+            <div className="mt-16 p-8 bg-white rounded-lg shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-bold text-black mb-4 font-canela">
+                Still have questions?
               </h3>
-              <p className="text-base text-body-color dark:text-body-color-dark">
-                Our team of document intelligence experts is ready to help you implement the perfect solution for your organization. Contact us using our contact page or socials.
+              <p className="text-lg text-gray-600 font-helvetica mb-6">
+                Our AI search experts are ready to help you optimize your brand's visibility in AI search engines. Get personalized assistance for your specific use case.
               </p>
+              <div className="flex flex-wrap gap-4">
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 font-helvetica"
+                >
+                  Contact Support
+                </Link>
+                <Link 
+                  href="/blogs" 
+                  className="inline-flex items-center px-6 py-3 bg-[#FFD66B] text-black font-semibold rounded-lg hover:bg-[#FFD66B]/90 transition-colors duration-300 font-helvetica"
+                >
+                  Read Our Blog
+                </Link>
+              </div>
             </div>
           </div>
         </div>

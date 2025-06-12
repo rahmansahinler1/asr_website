@@ -5,7 +5,6 @@ import { useState } from "react";
 
 const Footer = () => {
   const [expandedSections, setExpandedSections] = useState({
-    faq: false,
     alternatives: false
   });
 
@@ -107,49 +106,19 @@ const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <Link
-                      href="/blog"
+                      href="/blogs"
                       className="text-base text-white/80 duration-300 hover:text-[#FFD66B] font-helvetica"
                     >
                       Blogs
                     </Link>
                   </li>
                   <li>
-                    <div>
-                      <button
-                        onClick={() => toggleSection('faq')}
-                        className="flex items-center text-base text-white/80 duration-300 hover:text-[#FFD66B] font-helvetica"
-                      >
-                        FAQ
-                        <svg
-                          className={`ml-2 w-4 h-4 transform transition-transform ${
-                            expandedSections.faq ? 'rotate-180' : ''
-                          }`}
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </button>
-                      {expandedSections.faq && (
-                        <ul className="mt-2 ml-4 space-y-2">
-                          <li>
-                            <Link href="/faq/general" className="text-sm text-white/60 duration-300 hover:text-[#FFD66B] font-helvetica">
-                              General Questions
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/faq/pricing" className="text-sm text-white/60 duration-300 hover:text-[#FFD66B] font-helvetica">
-                              Pricing & Plans
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/faq/technical" className="text-sm text-white/60 duration-300 hover:text-[#FFD66B] font-helvetica">
-                              Technical Support
-                            </Link>
-                          </li>
-                        </ul>
-                      )}
-                    </div>
+                    <Link
+                      href="/faq"
+                      className="text-base text-white/80 duration-300 hover:text-[#FFD66B] font-helvetica"
+                    >
+                      FAQ
+                    </Link>
                   </li>
                   <li>
                     <div>
@@ -200,7 +169,7 @@ const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <Link
-                      href="/about"
+                      href="/about-aisearchrefs"
                       className="text-base text-white/80 duration-300 hover:text-[#FFD66B] font-helvetica"
                     >
                       About
