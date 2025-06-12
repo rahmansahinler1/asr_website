@@ -154,6 +154,16 @@ const Footer = () => {
                               vs BrightEdge
                             </Link>
                           </li>
+                          <li>
+                            <Link href="/alternatives/llmrefs" className="text-sm text-white/60 duration-300 hover:text-[#FFD66B] font-helvetica">
+                              vs LLMrefs
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/alternatives/chatrank" className="text-sm text-white/60 duration-300 hover:text-[#FFD66B] font-helvetica">
+                              vs ChatRank
+                            </Link>
+                          </li>
                         </ul>
                       )}
                     </div>
