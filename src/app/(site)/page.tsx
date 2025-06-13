@@ -7,8 +7,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Search Refs - Track Your Brand Mentions in AI Search Results",
-  description: "Monitor how AI search engines mention your brand. Track brand visibility across ChatGPT, Claude, Gemini and other AI platforms.",
+  title: "aisearchrefs.com: AI Monitoring & Competitor Analysis",
+  description: "Stop losing AI web search traffic. Track brand mentions across all AI platforms and see how you compare to competitors.",
 };
 
 export default async function Home() {
