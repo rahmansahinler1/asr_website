@@ -26,7 +26,7 @@ const Footer = () => {
               <Link href="/" className="mb-6 inline-block">
                 <div className="text-3xl font-mono font-bold">
                   <span className="text-[#FFD66B]">ai</span>
-                  <span className="text-white">searchrefs.com</span>
+                  <span className="text-white">searchrefs</span>
                 </div>
               </Link>
               

@@ -64,7 +64,7 @@ const Header = () => {
                 >
                   <div className="text-xl font-bold font-mono tracking-tight md:text-2xl">
                     <span className="text-[#FFD66B]">ai</span>
-                    <span className="text-white">searchrefs.com</span>
+                    <span className="text-white">searchrefs</span>
                   </div>
                 </Link>
               </div>

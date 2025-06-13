@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <>
-      <section id="home" className="relative z-10 overflow-hidden bg-primary pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]">
+      <section id="home" className="relative z-10 overflow-hidden bg-primary pb-10 pt-[85px] md:pb-[68px] md:pt-[102px] xl:pb-[85px] xl:pt-[119px] 2xl:pb-[102px] 2xl:pt-[136px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
@@ -29,11 +29,11 @@ const Hero = () => {
                 )}
                 
                 <h1 className="mb-5 text-5xl font-bold leading-tight text-white font-canela">
-                  Track Your Brand Mentions Across All Major AI Search Engines and Chatbots
+                  Stop losing on <span className="bg-[#FFD66B]/75 px-1 rounded">ai web search</span>
                 </h1>
                 
-                <p className="mb-8 text-2xl !leading-relaxed text-white/90 font-helvetica">
-                  Monitor how AI search engines like ChatGPT, Claude, Gemini, Grok, DeepSeek, and Perplexity mention your brand in their responses. Get comprehensive analytics and actionable insights to improve your AI visibility, track brand reputation across different niches, and stay ahead of the AI-driven search landscape.
+                <p className="mb-6 text-2xl !leading-relaxed text-white/90 font-helvetica">
+                  Do you know how often you're mentioned in ChatGPT, Claude, Gemini, Grok, DeepSeek, and Perplexity? Get real data with <span className="bg-[#FFD66B]/75 px-1 rounded">*ai monitoring*</span>
                 </p>
                 
                 <div className="flex flex-col gap-4">
@@ -109,9 +109,9 @@ const Hero = () => {
                   <Image
                     src="/images/hero/ai-search.svg"
                     alt="AI Search Representation"
-                    width={500}
-                    height={500}
-                    className="h-80 w-80 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px] xl:h-[550px] xl:w-[550px]"
+                    width={400}
+                    height={400}
+                    className="h-64 w-64 md:h-80 md:w-80 lg:h-[400px] lg:w-[400px] xl:h-[450px] xl:w-[450px]"
                     priority
                   />
                   
