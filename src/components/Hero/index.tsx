@@ -29,11 +29,11 @@ const Hero = () => {
                 )}
                 
                 <h1 className="mb-5 text-5xl font-bold leading-tight text-white font-canela">
-                  Stop losing on <span className="bg-[#FFD66B]/75 px-1 rounded">ai web search</span>
+                  Stop losing on <span className="bg-[#FFD66B]/90 px-1 rounded">ai web search</span>
                 </h1>
                 
                 <p className="mb-6 text-2xl !leading-relaxed text-white/90 font-helvetica">
-                  Do you know how often you're mentioned in ChatGPT, Claude, Gemini, Grok, DeepSeek, and Perplexity? Get real data with <span className="bg-[#FFD66B]/75 px-1 rounded">*ai monitoring*</span>
+                  Do you know how often you're mentioned in ChatGPT, Claude, Gemini, Grok, DeepSeek, and Perplexity? Get real data with <span className="bg-[#FFD66B]/90 px-1 rounded">*ai monitoring*</span>
                 </p>
                 
                 <div className="flex flex-col gap-4">
@@ -107,7 +107,7 @@ const Hero = () => {
               <div className="flex items-center justify-center lg:justify-center">
                 <div className="relative">
                   <Image
-                    src="/images/hero/ai-search.svg"
+                    src="/images/hero/ai-web-search.svg"
                     alt="AI Search Representation"
                     width={400}
                     height={400}
