@@ -38,46 +38,46 @@ const AboutSectionTwo = () => {
               {/* Explanation Text - In rounded box with black text */}
               <div className="mb-4 inline-block bg-white rounded-full px-4 py-2 border border-gray-200">
                 <p className="text-sm font-medium text-black font-helvetica">
-                  Advanced Features
+                  Measurement First, Insights Second
                 </p>
               </div>
               
               {/* Main Header - One line, Canela font, 48px, bold */}
               <h2 className="mb-6 font-canela font-bold text-black leading-tight whitespace-nowrap" style={{ fontSize: '48px' }}>
-                Powerful <span className="text-[#FFD66B]">AI Analytics</span> Suite
+                Data<span className="text-[#FFD66B]"> Insights</span>
               </h2>
               
               {/* Description - Helvetica Neue, 16px, 28px line height */}
               <p className="mb-8 font-helvetica text-black" style={{ fontSize: '16px', lineHeight: '28px' }}>
-                Advanced monitoring capabilities with detailed reporting, competitive analysis, and real-time alerts to keep you ahead of the competition in AI search results.
+                You can't optimize what you can't measure. We track AI traffic, brand mentions, and competitor performance across all platforms.
               </p>
 
               {/* Feature sections */}
               <div className="space-y-6">
                 <div>
                   <h3 className="mb-3 text-lg font-semibold text-black font-helvetica">
-                    Real-time Alerts
+                    Real data
                   </h3>
                   <p className="text-sm text-gray-700 font-helvetica" style={{ lineHeight: '20px' }}>
-                    Get instant notifications when your brand is mentioned across AI platforms. Never miss an important mention again.
+                    We don't optimize your AI traffic, we measure it. Nobody can optimize what they can't measure. Generating LLM answers is not real optimization.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="mb-3 text-lg font-semibold text-black font-helvetica">
-                    Competitive Analysis
+                    Track everything
                   </h3>
                   <p className="text-sm text-gray-700 font-helvetica" style={{ lineHeight: '20px' }}>
-                    See how your brand compares to competitors in AI search results and identify opportunities for improvement.
+                    Your niche, your brand, your competitor, your AI SEO score. We track it all.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="mb-3 text-lg font-semibold text-black font-helvetica">
-                    Detailed Reporting
+                    Optimize for AI answers, not keywords
                   </h3>
                   <p className="text-sm text-gray-700 font-helvetica" style={{ lineHeight: '20px' }}>
-                    Comprehensive analytics dashboard with insights, trends, and actionable recommendations for your brand.
+                    Do you know that AI answers suggest brands in their discussions? Optimization is changing, and you need to change with it.
                   </p>
                 </div>
               </div>

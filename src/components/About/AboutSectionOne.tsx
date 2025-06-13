@@ -8,9 +8,9 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const benefits = [
-    "Track mentions across all AI platforms instantly",
-    "Comprehensive insights and reporting dashboard",
-    "See how you compare to competitors in AI responses"
+    "Track every direct link and text mention",
+    "Advanced filtering by niche, brand, or competitor",
+    "Get your AI SEO score"
   ];
 
   return (
@@ -23,7 +23,7 @@ const AboutSectionOne = () => {
               {/* Explanation Text - In rounded box with black text */}
               <div className="mb-4 inline-block bg-white rounded-full px-4 py-2 border border-gray-200">
                 <p className="text-sm font-medium text-black font-helvetica">
-                  Why Choose AI Search Refs
+                  AI Web Search Changes Everything
                 </p>
               </div>
               
@@ -34,7 +34,7 @@ const AboutSectionOne = () => {
               
               {/* Description - Helvetica Neue, 16px, 28px line height */}
               <p className="mb-8 font-helvetica text-black" style={{ fontSize: '16px', lineHeight: '28px' }}>
-                Get comprehensive analytics and actionable insights to improve your AI visibility, track brand reputation across different niches, and stay ahead of the AI-driven search landscape.
+              AI answers are becoming the new search results. Call it Generative Engine Optimization (GEO) or AI SEO - the reality is customers are discovering brands through ChatGPT and Claude responses. We track every mention so you know exactly where you stand.
               </p>
               
               {/* Benefits - Side by side with smaller ticks, 12px font */}
