@@ -12,12 +12,12 @@ const Blog = () => {
         <div className="mb-12">
           {/* Main Header - Canela font, 48px, bold with gold highlight */}
           <h2 className="mb-6 font-canela font-bold text-black leading-tight" style={{ fontSize: '48px' }}>
-            Our Latest <span className="text-[#FFD66B]">Blog Posts</span>
+            Latest <span className="text-[#FFD66B]">Blogs</span>
           </h2>
           
           {/* Description - Helvetica Neue, 16px, 28px line height */}
           <p className="font-helvetica text-black max-w-[600px]" style={{ fontSize: '16px', lineHeight: '28px' }}>
-            Stay updated with insights about AI search tracking, brand monitoring strategies, and the latest developments in AI-powered search technologies.
+          Read about research findings, AI monitoring techniques, and data-driven insights from tracking brand performance across AI platforms
           </p>
         </div>
 

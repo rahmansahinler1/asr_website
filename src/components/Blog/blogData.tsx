@@ -3,54 +3,88 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Data Security: How We Keep Your Documents Safe",
-    paragraph: "Discover our comprehensive approach to document security, featuring end-to-end encryption for every sentence in your documents.",
-    previewImage: "/images/blog/blog-security.png",
-    fullImage: "/images/blog/blog-security-full.jpg",
-    author: {
-      name: "Ozgur Nazim Sahin",
-      image: "/images/blog/blog-ozgur.png",
-      designation: "Co-founder",
-    },
-    tags: ["Security"],
-    publishDate: "12/21/2024",
-    slug: "enterprise-security",
-    introText: "In today's digital landscape, data security isn't just a feature - it's a fundamental necessity. At Doclink, we understand that our users trust us with their valuable documents and sensitive information. That's why security has been at the core of our architecture from day one. When you're working with Doclink, whether you're uploading business documents, research papers, or personal files, our security infrastructure ensures that your data stays exactly where it belongs - in your control. Let's take you through our comprehensive security approach and the measures we've implemented to keep your data safe.",
-    content: "Every interaction with Doclink begins with secure authentication. We've implemented Google OAuth 2.0 integration, providing you with industry-standard security practices. Our session management system uses encrypted cookies and secure tokens, ensuring that your session remains protected throughout your interaction with our platform. We believe in encryption everywhere. That's why we've implemented AES-GCM (Advanced Encryption Standard in Galois/Counter Mode), one of the most secure encryption methods available. Every document you upload is encrypted before storage, with unique encryption keys for each file. No body, even us can't read the sentences of the file you uploaded. Even a hacker reach the database, all of the sentences you provide are encrypted means undereadable. Also, because of our storage architecture every sentence of your documents are encrypted separately. We're doing every best practice to store your files and your information at maximum security."
+    title: "AI Web Search Explained: How LLMs are Changing Discovery",
+    paragraph: "Understanding how AI web search platforms operate reveals why traditional SEO strategies fail. Learn the technical architecture driving this transformation.",
+    previewImage: "/images/blog/ai-seo-guide.png",
+    fullImage: "/images/blog/ai-seo-guide-full.jpg",
+    slug: "ai-web-search",
+    introText: "AI web search represents a fundamental shift from keyword-based retrieval to conversational intelligence. LLMs don't just find information—they understand context, synthesize knowledge, and deliver insights through natural dialogue. This transformation renders traditional SEO obsolete.",
+    sections: [
+              {
+          header: "The Technical Reality Behind AI Web Search",
+          content: "AI web search operates on a dual-layer architecture: traditional search APIs paired with semantic ranking algorithms. LLMs query existing search engines like Bing or Google, then apply vector embeddings to rank results by contextual relevance rather than keyword density. This semantic understanding explains why conventional SEO tactics produce inconsistent results in AI responses.",
+        },
+              {
+          header: "How AI Platforms Actually Search",
+          content: "AI platforms employ Retrieval-Augmented Generation (RAG) to enhance their knowledge base. ChatGPT, Claude, and similar systems execute real-time searches through established APIs, retrieve multiple sources, then process this content through semantic analysis. Vector embeddings determine relevance based on meaning and context, not keyword frequency. The LLM then synthesizes ranked results into coherent responses that appear conversational but follow precise algorithmic logic.",
+        },
+              {
+          header: "Why Traditional SEO Doesn't Work for AI",
+          content: "AI platforms distinguish between pre-trained knowledge and real-time information retrieval. While training data provides foundational context, current AI answers depend on semantic search performance during live queries. Traditional SEO optimizes for keyword matching and backlink authority—metrics that semantic algorithms largely ignore. AI monitoring becomes essential because conventional analytics cannot track this new discovery pathway.",
+        },
+              {
+          header: "Optimize for Discussion, Not Keywords",
+          content: "Effective ai seo requires conversational optimization over keyword density. LLMs evaluate content for contextual depth, semantic coherence, and authoritative insights rather than repetitive phrases. Content that answers complex questions thoroughly, demonstrates expertise naturally, and maintains conversational flow ranks higher in AI responses than traditional keyword-optimized pages.",
+        },
+              {
+          header: "The Invisible AI Traffic Problem",
+          content: "AI-driven discovery creates attribution gaps that traditional analytics cannot measure. Users who encounter brands through ChatGPT, Claude, or similar platforms often navigate directly to websites, bypassing trackable referral paths. This 'dark funnel' effect means businesses lose visibility into significant traffic sources. Comprehensive ai monitoring provides the missing attribution data that reveals true brand discovery patterns across AI platforms.",
+        },
+              {
+          header: "Building Your AI Competitor Analysis Strategy",
+          content: "Strategic ai competitor analysis requires systematic monitoring of brand mentions across AI platforms. Advanced organizations track competitor visibility in ChatGPT, Claude, and Gemini responses, analyzing which brands appear for industry-specific queries. This intelligence reveals content gaps, messaging opportunities, and semantic positioning strategies that influence AI recommendations. Market leaders leverage these insights to capture AI traffic while competitors remain invisible.",
+        },
+              {
+          header: "Conclusion",
+          content: "AI web search fundamentally prioritizes semantic understanding over keyword optimization, rendering traditional SEO frameworks obsolete. Organizations that master vector embeddings, conversational optimization, and ai monitoring will control AI discovery channels. Those relying on conventional tactics will become progressively invisible as AI platforms reshape how customers find and evaluate brands.",
+        },
+    ]
   },
   {
     id: 2,
-    title: "Answer accuracy: Learn More About AI Technique We Use",
-    paragraph: "We implemented from scratch RAG method to keep every answer based on the data provided. Because of it, we ensure high document capacity and high answer accuracy.",
-    previewImage: "/images/blog/blog-ai.png",
-    fullImage: "/images/blog/blog-ai-full.jpg",
-    author: {
-      name: "Rahman Sahinler",
-      image: "/images/blog/blog-rahman.png",
-      designation: "Founder",
-    },
-    tags: ["AI"],
-    publishDate: "15/11/2024",
-    slug: "ai-document-analysis",
-    introText: "In today's AI-driven world, getting accurate answers from your documents shouldn't be a game of chance. At Doclink, we've implemented Retrieval-Augmented Generation (RAG), an advanced AI technique that ensures precise and reliable responses when chatting with your documents. Unlike traditional chatbots that might hallucinate or provide inconsistent answers, our custom-built RAG system carefully searches through your documents, finds the most relevant information, and generates responses that are always grounded in your actual content. We've developed our solution from the ground up, focusing on accuracy and reliability in every interaction.",
-    content: "Our journey to perfect document-based AI chat began with a fundamental question: How can we make document interaction both powerful and trustworthy? The answer lies in our step-by-step crafted RAG implementation. We start by creating highly accurate document embeddings, transforming your content into a format that AI can understand deeply. These embeddings are then indexed using FAISS technology, enabling lightning-fast semantic search capabilities that understand the true meaning behind your questions. When you chat with your documents, our system doesn't just match keywords – it comprehends context, identifies relevant sections across multiple files, and weighs the importance of each piece of information. This sophisticated retrieval process feeds into our generation phase, where we've implemented careful prompt engineering to ensure responses are not only accurate but also natural and easy to understand. What sets our implementation apart is the balance between speed and precision – we've optimized every step of the process, from document processing to response generation, ensuring you get accurate answers within seconds. Our system also provides complete transparency by showing you exactly which parts of your documents were used to generate each response, giving you confidence in the accuracy of every interaction. This groundbreaking approach to document AI chat means you're not just getting quick answers – you're getting reliable insights that you can trust and verify. If you want to know better about our RAG integration, go checkout our github page. We're completely open source!"
+    title: "LLM SEO: Optimize for Large Language Models",
+    paragraph: "Master LLM SEO techniques to dominate AI search results. Learn how language models choose which brands to recommend in their responses.",
+    previewImage: "/images/blog/llm-seo.png",
+    fullImage: "/images/blog/llm-seo-full.jpg",
+    slug: "why-ai-search-tracking-works",
+    introText: "Large Language Models process information differently than search engines. They analyze context, authority, and relevance in ways that traditional SEO doesn't address. Here's how to optimize for this new reality.",
+    sections: [
+      {
+        header: "How LLMs Select Content",
+        content: "LLMs don't just look at keywords. They understand context, evaluate source credibility, and prioritize recent, accurate information. Your content needs to excel in all these areas to earn mentions."
+      },
+      {
+        header: "Content Structure for LLMs",
+        content: "Write clear, scannable content with obvious expertise signals. Use specific examples, cite sources, and structure information logically. LLMs reward content that answers questions completely."
+      },
+      {
+        header: "Measuring LLM Performance",
+        content: "Traditional analytics don't show LLM visibility. You need specialized tools to track mentions across different AI platforms and understand which content drives the most AI recommendations."
+      }
+    ]
   },
   {
     id: 3,
-    title: "How to use better? Tips to get most out of Doclink",
-    paragraph: "We optimize Doclink for your best experience. Doclink only generate answers from your files. Reaching information might take another shot. Learn how to use it best.",
-    previewImage: "/images/blog/blog-tips.png",
-    fullImage: "/images/blog/blog-tips-full.jpg",
-    author: {
-      name: "Rahman Sahinler",
-      image: "/images/blog/blog-rahman.png",
-      designation: "Founder",
-    },
-    tags: ["Tips"],
-    publishDate: "01/12/2025",
-    slug: "tips-tricks",
-    introText: "Getting the most out of your AI document assistant isn't just about uploading files and asking questions. Doclink offers powerful features that let you fine-tune your document interactions and receive precisely targeted answers. From organizing documents in custom domains to filtering specific files for targeted searches, our AI assistant puts you in complete control of your information. Whether you're researching across multiple documents or diving deep into a specific file, Doclink's intelligent features ensure you're always getting the most relevant and accurate responses.",
-    content: "Mastering Doclink starts with smart document organization. Create separate domains for different projects or topics – this isn't just about keeping things tidy, it's about enhancing the accuracy of your AI interactions. When you're working with multiple documents, take advantage of our unique file filtering system: you can select specific files within your domain for more focused searches, ensuring your AI assistant only references the most relevant sources. Every answer you receive comes with detailed source tracking, showing you exactly which documents and pages contributed to the response. This transparency isn't just about verification – it's a powerful tool for deeper research. When reviewing responses, pay attention to the source references displayed in the right panel; they provide context and allow you to explore related information in your documents. For complex queries, try breaking them down into specific questions rather than broad requests. This approach, combined with our intelligent file filtering, helps you drill down to exactly the information you need. The AI will automatically highlight the most relevant sections from your documents, making it easy to verify information and discover related context. If you're working with large document collections, consider creating themed domains and use the file selection feature strategically – for instance, you might select only the most recent documents for up-to-date information, or combine specific policy documents with related guidelines for comprehensive answers. Remember, Doclink's power lies in its ability to not just search, but understand your documents contextually, so frame your questions naturally and let our AI assistant do the heavy lifting of finding and connecting relevant information across your selected sources."
+    title: "AI Competitor Analysis: See Who Wins AI Mentions",
+    paragraph: "Discover which competitors dominate AI search results in your industry. Learn their strategies and find gaps you can exploit to win more mentions.",
+    previewImage: "/images/blog/ai-competitor-analysis.png",
+    fullImage: "/images/blog/ai-competitor-analysis-full.jpg",
+    slug: "ai-competitor-analysis",
+    introText: "Your competitors might be winning AI mentions while you're invisible. AI competitor analysis reveals who gets recommended by ChatGPT, Claude, and other platforms when people ask about your industry.",
+    sections: [
+      {
+        header: "Map Your AI Competition",
+        content: "Identify which brands AI platforms mention most in your space. Some competitors excel at AI visibility while struggling with traditional SEO. Others dominate both channels."
+      },
+      {
+        header: "Analyze Competitor Strategies",
+        content: "Study what makes competitors successful in AI responses. Look at their content types, topics, and messaging. Find patterns in how they position themselves as industry authorities."
+      },
+      {
+        header: "Find Your AI Opportunity",
+        content: "Spot gaps where no competitor consistently wins AI mentions. These represent your biggest opportunities to establish dominance in specific topic areas or customer segments."
+      }
+    ]
   }
 ];
 

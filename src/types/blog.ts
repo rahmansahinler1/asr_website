@@ -1,7 +1,6 @@
-type Author = {
-  name: string;
-  image: string;
-  designation: string;
+export type BlogSection = {
+  header: string;
+  content: string;
 };
 
 export type Blog = {
@@ -10,10 +9,7 @@ export type Blog = {
   paragraph: string;
   previewImage: string;
   fullImage: string;
-  author: Author;
-  tags: string[];
-  publishDate: string;
-  slug: string;
   introText: string;
-  content: string;
+  slug: string;
+  sections: BlogSection[];
 };

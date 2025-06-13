@@ -9,64 +9,72 @@ const SingleBlogPage = ({ params }: { params: { slug: string } }) => {
     notFound();
   }
 
+  // Split sections for positioning the image in the middle
+  const midPoint = Math.ceil(blog.sections.length / 2);
+  const firstHalfSections = blog.sections.slice(0, midPoint);
+  const secondHalfSections = blog.sections.slice(midPoint);
+
   return (
-    <section className="pb-[120px] pt-[150px] bg-primary">
+    <>
+      {/* Navigation background - Primary color section */}
+      <section className="h-[100px] bg-primary"></section>
+      
+      {/* Content section */}
+      <section className="pb-[120px] pt-[50px] bg-[#F5F5F5]">
       <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 lg:w-8/12">
             <div>
-              <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+              <h1 className="mb-8 text-4xl font-bold leading-tight text-black font-canela">
                 {blog.title}
-              </h2>
+              </h1>
               
-              <div className="mb-10 flex flex-wrap items-center border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
-                <div className="flex flex-wrap items-center">
-                  <div className="mb-5 mr-10 flex items-center">
-                    <div className="mr-4">
-                      <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                        <Image
-                          src={blog.author.image}
-                          alt="author"
-                          fill
-                        />
-                      </div>
-                    </div>
-                    <div className="w-full">
-                      <h4 className="mb-1 text-base font-medium text-body-color">
-                        By <span>{blog.author.name}</span>
-                      </h4>
-                      <p className="text-xs text-body-color">{blog.author.designation}</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="mb-10 text-lg font-medium leading-relaxed text-gray-700 font-helvetica">
+                {blog.introText}
               </div>
-              
-              <div className="blog-content">
-                <div className="mb-10 text-base font-medium leading-relaxed text-body-color">
-                  {blog.introText}
-                </div>
 
-                <div className="content mb-10 w-full overflow-hidden rounded">
-                  <div className="relative aspect-[16/9] w-full">
-                    <Image
-                      src={blog.fullImage}
-                      alt={blog.title}
-                      fill
-                      className="object-cover"
-                      priority={true}  // This will preload the image
-                    />
-                  </div>
+              {/* First half of sections */}
+              {firstHalfSections.map((section, index) => (
+                <div key={index} className="mb-10">
+                  <h2 className="mb-6 text-2xl font-bold text-black font-canela">
+                    {section.header}
+                  </h2>
+                  <p className="text-base leading-relaxed text-gray-700 font-helvetica">
+                    {section.content}
+                  </p>
                 </div>
-                
-                <div className="prose max-w-none text-base font-medium leading-relaxed text-body-color">
-                  {blog.content}
+              ))}
+
+              {/* Full image positioned in the middle */}
+              <div className="content mb-10 w-full overflow-hidden rounded">
+                <div className="relative aspect-[16/9] w-full">
+                  <Image
+                    src={blog.fullImage}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                    priority={true}
+                  />
                 </div>
               </div>
+
+              {/* Second half of sections */}
+              {secondHalfSections.map((section, index) => (
+                <div key={index + midPoint} className="mb-10">
+                  <h2 className="mb-6 text-2xl font-bold text-black font-canela">
+                    {section.header}
+                  </h2>
+                  <p className="text-base leading-relaxed text-gray-700 font-helvetica">
+                    {section.content}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </section>
+    </>
   );
 };
 
