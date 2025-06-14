@@ -1,5 +1,6 @@
 // src/app/api/contact/route.ts
 import { NextResponse } from "next/server";
+import { addToWishlist } from "@/utils/database";
 
 export async function POST(req: Request) {
   try {
@@ -22,24 +23,33 @@ export async function POST(req: Request) {
       );
     }
 
-    // For now, just log the contact form submission
-    // In the future, you can integrate with your preferred email service or database
-    console.log('Contact form submission:', {
-      name,
-      email,
-      message,
-      timestamp: new Date().toISOString()
-    });
+    // Split name into name and surname (assuming single space separation)
+    const nameParts = name.trim().split(' ');
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ') || ''; // Handle multiple middle names
 
-    return NextResponse.json({
-      success: true,
-      message: 'Thank you for your message. We will get back to you soon.'
-    });
+    // Save to wishlist_info table
+    const result = await addToWishlist(email, firstName, lastName, message);
+
+    if (result) {
+      return NextResponse.json({
+        success: true,
+        message: 'Thank you for sharing your wish! We will be in touch soon.',
+        data: {
+          email: result.user_email,
+          name: result.user_name,
+          surname: result.user_surname,
+          createdAt: result.created_at
+        }
+      });
+    } else {
+      throw new Error('Failed to save contact form data');
+    }
 
   } catch (error) {
     console.error('Error submitting contact form:', error);
     return NextResponse.json(
-      { error: 'Failed to submit contact form' },
+      { error: 'Failed to submit contact form. Please try again.' },
       { status: 500 }
     );
   }

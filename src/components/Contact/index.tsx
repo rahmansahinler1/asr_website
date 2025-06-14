@@ -13,6 +13,7 @@ const Contact = () => {
     success: false,
     error: ""
   });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,17 +28,26 @@ const Contact = () => {
         body: JSON.stringify(formData)
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit');
-      }
+      const data = await response.json();
 
-      setStatus({ loading: false, success: true, error: "" });
-      setFormData({ name: "", email: "", message: "" }); // Reset form
+      if (response.ok && data.success) {
+        setShowSuccess(true);
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+        
+        // Show success state for 2 seconds, then return to normal
+        setTimeout(() => {
+          setShowSuccess(false);
+          setStatus({ loading: false, success: true, error: "" });
+        }, 2000);
+      } else {
+        throw new Error(data.error || 'Failed to submit');
+      }
     } catch (error) {
+      console.error('Contact form error:', error);
       setStatus({
         loading: false,
         success: false,
-        error: "Failed to send message. Please try again."
+        error: error.message || "Failed to send message. Please try again."
       });
     }
   };
@@ -126,17 +136,28 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      disabled={status.loading}
-                      className={`rounded-sm bg-[#FFD66B] px-6 sm:px-9 py-3 sm:py-4 text-sm sm:text-base font-medium text-black shadow-submit duration-300 hover:bg-[#FFD66B]/90 dark:shadow-submit-dark font-helvetica ${
+                      disabled={status.loading || showSuccess}
+                      className={`rounded-sm px-6 sm:px-9 py-3 sm:py-4 text-sm sm:text-base font-medium shadow-submit duration-500 dark:shadow-submit-dark font-helvetica transition-all ease-in-out ${
+                        showSuccess 
+                          ? 'bg-green-500 text-white' 
+                          : 'bg-[#FFD66B] text-black hover:bg-[#FFD66B]/90'
+                      } ${
                         status.loading ? 'opacity-70 cursor-not-allowed' : ''
                       }`}
                     >
-                      {status.loading ? 'Sending...' : 'Send Your Wish'}
+                      {showSuccess ? (
+                        <span className="flex items-center justify-center">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                      ) : status.loading ? (
+                        'Sending...'
+                      ) : (
+                        'Send Your Wish'
+                      )}
                     </button>
-                    
-                    {status.success && (
-                      <p className="mt-4 text-green-500 font-helvetica text-sm sm:text-base">Thank you for sharing your wish! We'll be in touch soon.</p>
-                    )}
+
                     
                     {status.error && (
                       <p className="mt-4 text-red-500 font-helvetica text-sm sm:text-base">{status.error}</p>

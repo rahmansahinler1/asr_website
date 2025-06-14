@@ -7,12 +7,58 @@ import Image from 'next/image';
 const Hero = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleEarlyAccess = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement early access signup
-    console.log('Early access signup:', email);
-    setIsSubscribed(true);
+    
+    if (!email) return;
+    
+    setIsLoading(true);
+    
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setShowSuccess(true);
+        setEmail(''); // Clear the input
+        
+        // Show success state for 2 seconds, then return to normal
+        setTimeout(() => {
+          setShowSuccess(false);
+          setIsSubscribed(true);
+        }, 2000);
+      } else {
+        // Handle error cases but still show success for better UX
+        console.error('Waitlist signup error:', data.error);
+        setShowSuccess(true);
+        
+        setTimeout(() => {
+          setShowSuccess(false);
+          setIsSubscribed(true);
+        }, 2000);
+      }
+    } catch (error) {
+      console.error('Error joining waitlist:', error);
+      // Still show success message to user for better UX
+      setShowSuccess(true);
+      
+      setTimeout(() => {
+        setShowSuccess(false);
+        setIsSubscribed(true);
+      }, 2000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -22,11 +68,7 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <div className="max-w-[700px]">
-                {isSubscribed && (
-                  <div className="mb-4 p-3 bg-white/20 text-white rounded-lg backdrop-blur-sm font-helvetica text-sm md:text-base">
-                    Thank you! We'll notify you when aisearchrefs launches.
-                  </div>
-                )}
+
                 
                 <h1 className="mb-5 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white font-canela">
                   Stop losing on <span className="bg-[#FFD66B]/90 px-1 rounded">ai web search</span>
@@ -48,9 +90,26 @@ const Hero = () => {
                     />
                     <button
                       type="submit"
-                      className="rounded-sm bg-[#F5F5F5] px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold text-black duration-300 ease-in-out hover:bg-white whitespace-nowrap font-helvetica"
+                      disabled={isLoading || showSuccess}
+                      className={`rounded-sm px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold duration-500 ease-in-out whitespace-nowrap font-helvetica transition-all ${
+                        showSuccess 
+                          ? 'bg-green-500 text-white' 
+                          : 'bg-[#F5F5F5] text-black hover:bg-white'
+                      } ${
+                        isLoading ? 'opacity-70 cursor-not-allowed' : ''
+                      }`}
                     >
-                      Join Waitlist
+                      {showSuccess ? (
+                        <span className="flex items-center justify-center">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                      ) : isLoading ? (
+                        'Joining...'
+                      ) : (
+                        'Join Waitlist'
+                      )}
                     </button>
                   </form>
                 </div>
