@@ -110,7 +110,7 @@ const Contact = () => {
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-black dark:text-white font-helvetica"
                       >
-                        Your Message or Wish
+                        Your Wish
                       </label>
                       <textarea
                         name="message"
