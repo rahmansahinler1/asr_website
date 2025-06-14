@@ -37,7 +37,7 @@ const Footer = () => {
               
               {/* Copyright */}
               <p className="text-base text-white/60 font-helvetica">
-                © 2025, AI Search Refs. All rights reserved.
+                © 2025, aisearchrefs.com. All rights reserved.
               </p>
             </div>
 

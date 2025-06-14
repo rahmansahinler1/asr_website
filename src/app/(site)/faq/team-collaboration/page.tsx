@@ -3,8 +3,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Team Collaboration - FAQ | AI Search Refs",
-  description: "Learn about team collaboration features and multi-user access in AI Search Refs",
+  title: "Team Collaboration - FAQ | aisearchrefs",
+  description: "Learn about team collaboration features and multi-user access in aisearchrefs",
 };
 
 const TeamCollaborationPage = () => {
@@ -27,7 +27,7 @@ const TeamCollaborationPage = () => {
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-gray-600 font-helvetica">
-                  Yes! AI Search Refs supports team collaboration with multi-user access, role-based permissions, and collaborative features designed to help teams work together effectively on AI search optimization.
+                  Yes! aisearchrefs supports team collaboration with multi-user access, role-based permissions, and collaborative features designed to help teams work together effectively on AI search optimization.
                 </p>
 
                 <div>

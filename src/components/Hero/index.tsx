@@ -24,7 +24,7 @@ const Hero = () => {
               <div className="max-w-[700px]">
                 {isSubscribed && (
                   <div className="mb-4 p-3 bg-white/20 text-white rounded-lg backdrop-blur-sm font-helvetica">
-                    Thank you! We'll notify you when AI Search Refs launches.
+                    Thank you! We'll notify you when aisearchrefs launches.
                   </div>
                 )}
                 

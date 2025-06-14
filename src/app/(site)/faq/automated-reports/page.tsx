@@ -3,8 +3,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Automated Reports - FAQ | AI Search Refs",
-  description: "Learn about AI Search Refs automated reporting features and how to schedule regular performance updates",
+  title: "Automated Reports - FAQ | aisearchrefs",
+  description: "Learn about aisearchrefs automated reporting features and how to schedule regular performance updates",
 };
 
 const AutomatedReportsPage = () => {
@@ -27,7 +27,7 @@ const AutomatedReportsPage = () => {
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-gray-600 font-helvetica">
-                  Yes! AI Search Refs offers comprehensive automated reporting features that deliver regular performance updates directly to your inbox, keeping you informed about your brand's AI search performance without manual checking.
+                  Yes! aisearchrefs offers comprehensive automated reporting features that deliver regular performance updates directly to your inbox, keeping you informed about your brand's AI search performance without manual checking.
                 </p>
 
                 <div>

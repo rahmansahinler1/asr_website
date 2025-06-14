@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AI Search Refs vs ChatRank | AI Search Engine Optimization",
-  description: "Compare AI Search Refs with ChatRank. See why we provide superior brand monitoring, competitor analysis, and weekly change detection.",
+  title: "aisearchrefs vs ChatRank | AI Search Engine Optimization",
+  description: "Compare aisearchrefs with ChatRank. See why we provide superior brand monitoring, competitor analysis, and weekly change detection.",
 };
 
 const ChatRankAlternativePage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="AI Search Refs vs ChatRank"
-        description="Why AI Search Refs delivers more comprehensive AI search optimization"
+        pageName="aisearchrefs vs ChatRank"
+        description="Why aisearchrefs delivers more comprehensive AI search optimization"
       />
 
       <section className="py-16 md:py-20 lg:py-28 bg-[#F5F5F5]">
@@ -19,17 +19,17 @@ const ChatRankAlternativePage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <h1 className="mb-6 text-4xl font-bold leading-tight text-primary font-canela">
-                AI Search Refs vs <span className="text-[#FFD66B]">ChatRank</span>
+                aisearchrefs vs <span className="text-[#FFD66B]">ChatRank</span>
               </h1>
               <p className="text-lg text-gray-600 font-helvetica">
-                While ChatRank offers AI search keyword tracking, AI Search Refs provides a complete solution with brand-specific monitoring, competitor intelligence, and automated change detection for strategic AI optimization.
+                Both aisearchrefs and ChatRank focus on AI search reference optimization, but we offer significantly more detailed features. While ChatRank provides basic AI search keyword tracking, aisearchrefs delivers comprehensive brand monitoring, advanced competitor analysis, automated change detection, and detailed AI search visibility scoring across more AI platforms for complete AI search optimization.
               </p>
             </div>
 
             {/* Comparison Table */}
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 mb-8">
               <h2 className="mb-6 text-2xl font-bold text-black font-canela">
-                Feature Comparison
+                AI Search Reference Comparison
               </h2>
               
               <div className="overflow-x-auto">
@@ -37,7 +37,7 @@ const ChatRankAlternativePage = () => {
                   <thead>
                     <tr className="border-b border-gray-200">
                       <th className="text-left py-3 px-4 font-semibold text-black font-helvetica">Feature</th>
-                      <th className="text-center py-3 px-4 font-semibold text-[#FFD66B] font-helvetica">AI Search Refs</th>
+                      <th className="text-center py-3 px-4 font-semibold text-[#FFD66B] font-helvetica">aisearchrefs</th>
                       <th className="text-center py-3 px-4 font-semibold text-gray-600 font-helvetica">ChatRank</th>
                     </tr>
                   </thead>
@@ -72,6 +72,26 @@ const ChatRankAlternativePage = () => {
                       <td className="py-3 px-4 text-center text-green-600">✓ Advanced</td>
                       <td className="py-3 px-4 text-center text-red-500">✗ Basic</td>
                     </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">AI Platform Coverage</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ ChatGPT, Claude, Gemini, Perplexity, Grok, DeepSeek</td>
+                      <td className="py-3 px-4 text-center text-yellow-500">△ Limited Platforms</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">Brand Context Analysis</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ Detailed Context Scoring</td>
+                      <td className="py-3 px-4 text-center text-red-500">✗ Not Available</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">AI Search Visibility Scoring</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ Comprehensive Metrics</td>
+                      <td className="py-3 px-4 text-center text-red-500">✗ Basic Tracking Only</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">Automated Reporting</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ Weekly AI Performance Reports</td>
+                      <td className="py-3 px-4 text-center text-red-500">✗ Manual Tracking</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -80,7 +100,7 @@ const ChatRankAlternativePage = () => {
             {/* Strategic Advantages */}
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 mb-8">
               <h2 className="mb-6 text-2xl font-bold text-black font-canela">
-                Strategic Advantages of AI Search Refs
+                Strategic Advantages of aisearchrefs
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -197,7 +217,7 @@ const ChatRankAlternativePage = () => {
               <div className="space-y-4">
                 <div className="p-4 bg-green-50 border-l-4 border-green-400 rounded">
                   <p className="text-sm text-gray-700 font-helvetica">
-                    <strong>Choose AI Search Refs if:</strong> You need strategic AI search optimization with brand protection, competitive intelligence, and proactive monitoring for business growth.
+                    <strong>Choose aisearchrefs if:</strong> You need strategic AI search optimization with brand protection, competitive intelligence, and proactive monitoring for business growth.
                   </p>
                 </div>
                 
@@ -222,7 +242,7 @@ const ChatRankAlternativePage = () => {
                   href="/pricing"
                   className="inline-flex items-center px-8 py-3 bg-[#FFD66B] text-black font-semibold rounded-lg hover:bg-[#FFD66B]/90 transition-colors duration-300 font-helvetica"
                 >
-                  Choose AI Search Refs
+                  Choose aisearchrefs
                 </a>
               </div>
             </div>

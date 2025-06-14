@@ -3,8 +3,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Data Accuracy - FAQ | AI Search Refs",
-  description: "Understanding the accuracy and reliability of AI Search Refs tracking data and methodologies",
+  title: "Data Accuracy - FAQ | aisearchrefs",
+  description: "Understanding the accuracy and reliability of aisearchrefs tracking data and methodologies",
 };
 
 const DataAccuracyPage = () => {
@@ -27,7 +27,7 @@ const DataAccuracyPage = () => {
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-gray-600 font-helvetica">
-                  AI Search Refs maintains industry-leading accuracy through advanced monitoring technologies, multiple verification methods, and continuous system updates to ensure reliable tracking data.
+                  aisearchrefs maintains industry-leading accuracy through advanced monitoring technologies, multiple verification methods, and continuous system updates to ensure reliable tracking data.
                 </p>
 
                 <div>

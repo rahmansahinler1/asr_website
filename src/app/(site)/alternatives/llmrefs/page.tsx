@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AI Search Refs vs LLMrefs | AI Search Engine Optimization",
-  description: "Compare AI Search Refs with LLMrefs. Discover why we offer superior brand monitoring, competitor analysis, and weekly change detection.",
+  title: "aisearchrefs vs LLMrefs | AI Search Engine Optimization",
+  description: "Compare aisearchrefs with LLMrefs. Discover why we offer superior brand monitoring, competitor analysis, and weekly change detection.",
 };
 
 const LLMrefsAlternativePage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="AI Search Refs vs LLMrefs"
-        description="Why AI Search Refs offers more comprehensive AI search optimization"
+        pageName="aisearchrefs vs LLMrefs"
+        description="Why aisearchrefs offers more comprehensive AI search optimization"
       />
 
       <section className="py-16 md:py-20 lg:py-28 bg-[#F5F5F5]">
@@ -19,17 +19,17 @@ const LLMrefsAlternativePage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <h1 className="mb-6 text-4xl font-bold leading-tight text-primary font-canela">
-                AI Search Refs vs <span className="text-[#FFD66B]">LLMrefs</span>
+                aisearchrefs vs <span className="text-[#FFD66B]">LLMrefs</span>
               </h1>
               <p className="text-lg text-gray-600 font-helvetica">
-                While LLMrefs provides basic AI search keyword tracking, AI Search Refs delivers comprehensive brand monitoring, competitor analysis, and automated change detection for complete AI search optimization.
+                Both aisearchrefs and LLMrefs focus on AI search reference optimization, but we offer significantly more detailed features. While LLMrefs provides basic AI search keyword tracking, aisearchrefs delivers comprehensive brand monitoring, advanced competitor analysis, automated change detection, and detailed AI search visibility scoring across more AI platforms for complete AI search optimization.
               </p>
             </div>
 
             {/* Comparison Table */}
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 mb-8">
               <h2 className="mb-6 text-2xl font-bold text-black font-canela">
-                Feature Comparison
+                AI Search Reference Comparison
               </h2>
               
               <div className="overflow-x-auto">
@@ -37,7 +37,7 @@ const LLMrefsAlternativePage = () => {
                   <thead>
                     <tr className="border-b border-gray-200">
                       <th className="text-left py-3 px-4 font-semibold text-black font-helvetica">Feature</th>
-                      <th className="text-center py-3 px-4 font-semibold text-[#FFD66B] font-helvetica">AI Search Refs</th>
+                      <th className="text-center py-3 px-4 font-semibold text-[#FFD66B] font-helvetica">aisearchrefs</th>
                       <th className="text-center py-3 px-4 font-semibold text-gray-600 font-helvetica">LLMrefs</th>
                     </tr>
                   </thead>
@@ -72,6 +72,21 @@ const LLMrefsAlternativePage = () => {
                       <td className="py-3 px-4 text-center text-green-600">✓ Advanced</td>
                       <td className="py-3 px-4 text-center text-red-500">✗ Basic</td>
                     </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">AI Platform Coverage</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ ChatGPT, Claude, Gemini, Perplexity, Grok, DeepSeek</td>
+                      <td className="py-3 px-4 text-center text-yellow-500">△ Limited Platforms</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">Brand Context Analysis</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ Detailed Context Scoring</td>
+                      <td className="py-3 px-4 text-center text-red-500">✗ Not Available</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 text-gray-700">AI Search Visibility Scoring</td>
+                      <td className="py-3 px-4 text-center text-green-600">✓ Comprehensive Metrics</td>
+                      <td className="py-3 px-4 text-center text-red-500">✗ Basic Tracking Only</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -80,7 +95,7 @@ const LLMrefsAlternativePage = () => {
             {/* Key Differentiators */}
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 mb-8">
               <h2 className="mb-6 text-2xl font-bold text-black font-canela">
-                What Sets AI Search Refs Apart
+                What Sets aisearchrefs Apart
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -175,7 +190,7 @@ const LLMrefsAlternativePage = () => {
               <div className="space-y-4">
                 <div className="p-4 bg-green-50 border-l-4 border-green-400 rounded">
                   <p className="text-sm text-gray-700 font-helvetica">
-                    <strong>Choose AI Search Refs if:</strong> You need comprehensive brand monitoring, competitor analysis, and proactive change detection for strategic AI search optimization.
+                    <strong>Choose aisearchrefs if:</strong> You need comprehensive brand monitoring, competitor analysis, and proactive change detection for strategic AI search optimization.
                   </p>
                 </div>
                 
@@ -200,7 +215,7 @@ const LLMrefsAlternativePage = () => {
                   href="/pricing"
                   className="inline-flex items-center px-8 py-3 bg-[#FFD66B] text-black font-semibold rounded-lg hover:bg-[#FFD66B]/90 transition-colors duration-300 font-helvetica"
                 >
-                  Upgrade to AI Search Refs
+                  Upgrade to aisearchrefs
                 </a>
               </div>
             </div>

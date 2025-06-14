@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AI Search Refs vs BrightEdge | AI Search Engine Optimization",
-  description: "Compare AI Search Refs with BrightEdge. See why we're the better choice for AI search engine optimization and brand monitoring.",
+  title: "aisearchrefs vs BrightEdge | AI Search Engine Optimization",
+  description: "Compare aisearchrefs with BrightEdge. See why we're the better choice for AI search engine optimization and brand monitoring.",
 };
 
 const BrightEdgeAlternativePage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="AI Search Refs vs BrightEdge"
-        description="Why AI Search Refs is the more innovative choice for AI search optimization"
+        pageName="aisearchrefs vs BrightEdge"
+        description="Why aisearchrefs is the more innovative choice for AI search optimization"
       />
 
       <section className="py-16 md:py-20 lg:py-28 bg-[#F5F5F5]">
@@ -19,10 +19,10 @@ const BrightEdgeAlternativePage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <h1 className="mb-6 text-4xl font-bold leading-tight text-primary font-canela">
-                AI Search Refs vs <span className="text-[#FFD66B]">BrightEdge</span>
+                aisearchrefs vs <span className="text-[#FFD66B]">BrightEdge</span>
               </h1>
               <p className="text-lg text-gray-600 font-helvetica">
-                While BrightEdge serves enterprise SEO needs, AI Search Refs pioneers the future with dedicated AI search engine optimization and monitoring capabilities.
+                BrightEdge is a comprehensive enterprise SEO platform focused on traditional Google search optimization and content management. aisearchrefs focuses exclusively on AI search engine optimization - monitoring brand mentions and competitor performance across ChatGPT, Claude, Gemini, and Perplexity. We don't compete with BrightEdge's enterprise SEO tools; we specialize in the AI search landscape they don't cover.
               </p>
             </div>
 
@@ -37,7 +37,7 @@ const BrightEdgeAlternativePage = () => {
                   <thead>
                     <tr className="border-b border-gray-200">
                       <th className="text-left py-3 px-4 font-semibold text-black font-helvetica">Feature</th>
-                      <th className="text-center py-3 px-4 font-semibold text-[#FFD66B] font-helvetica">AI Search Refs</th>
+                      <th className="text-center py-3 px-4 font-semibold text-[#FFD66B] font-helvetica">aisearchrefs</th>
                       <th className="text-center py-3 px-4 font-semibold text-gray-600 font-helvetica">BrightEdge</th>
                     </tr>
                   </thead>
@@ -80,7 +80,7 @@ const BrightEdgeAlternativePage = () => {
             {/* Key Advantages */}
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 mb-8">
               <h2 className="mb-6 text-2xl font-bold text-black font-canela">
-                Why Choose AI Search Refs Over BrightEdge
+                Why Choose aisearchrefs Over BrightEdge
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -125,7 +125,7 @@ const BrightEdgeAlternativePage = () => {
                 </div>
                 
                 <div className="p-4 bg-green-50 border border-green-200 rounded">
-                  <h4 className="font-semibold text-green-800 mb-3 font-helvetica">AI Search Refs Innovation</h4>
+                  <h4 className="font-semibold text-green-800 mb-3 font-helvetica">aisearchrefs Innovation</h4>
                   <ul className="text-sm text-green-700 font-helvetica space-y-2">
                     <li>• AI-first optimization strategy</li>
                     <li>• Streamlined, intuitive interface</li>
@@ -169,7 +169,7 @@ const BrightEdgeAlternativePage = () => {
               <div className="space-y-4">
                 <div className="p-4 bg-green-50 border-l-4 border-green-400 rounded">
                   <p className="text-sm text-gray-700 font-helvetica">
-                    <strong>Choose AI Search Refs if:</strong> You want to lead in AI search optimization, track brand representation in AI responses, or prepare for the future of search marketing.
+                    <strong>Choose aisearchrefs if:</strong> You want to lead in AI search optimization, track brand representation in AI responses, or prepare for the future of search marketing.
                   </p>
                 </div>
                 
