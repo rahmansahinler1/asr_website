@@ -10,13 +10,13 @@ const Blog = () => {
       <div className="container">
         {/* Header Section - Left aligned like About sections */}
         <div className="mb-12">
-          {/* Main Header - Canela font, 48px, bold with gold highlight */}
-          <h2 className="mb-6 font-canela font-bold text-black leading-tight" style={{ fontSize: '48px' }}>
+          {/* Main Header - Responsive font sizes with gold highlight */}
+          <h2 className="mb-6 font-canela font-bold text-black leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Latest <span className="text-[#FFD66B]">Blogs</span>
           </h2>
           
-          {/* Description - Helvetica Neue, 16px, 28px line height */}
-          <p className="font-helvetica text-black max-w-[600px]" style={{ fontSize: '16px', lineHeight: '28px' }}>
+          {/* Description - Responsive font sizes */}
+          <p className="font-helvetica text-black max-w-[600px] text-sm sm:text-base leading-relaxed">
           Read about research findings, AI monitoring techniques, and data-driven insights from tracking brand performance across AI platforms
           </p>
         </div>

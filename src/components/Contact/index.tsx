@@ -55,19 +55,19 @@ const Contact = () => {
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three hover:shadow-one dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-              <h2 className="mb-6 font-canela font-bold text-black dark:text-white leading-tight" style={{ fontSize: '48px' }}>
+            <div className="mb-12 rounded-sm bg-white px-6 py-8 sm:px-8 sm:py-11 shadow-three hover:shadow-one dark:bg-gray-dark lg:mb-5 lg:px-8 xl:p-[55px]">
+              <h2 className="mb-6 font-canela font-bold text-black dark:text-white leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 Share Your <span className="text-[#FFD66B]">Wishes</span>
               </h2>
               
-              <p className="mb-12 font-helvetica text-black dark:text-body-color-dark max-w-[800px]" style={{ fontSize: '16px', lineHeight: '28px' }}>
+              <p className="mb-8 sm:mb-12 font-helvetica text-black dark:text-body-color-dark max-w-[800px] text-sm sm:text-base leading-relaxed">
                 Tell us about your AI search tracking needs and challenges. We're building solutions for the future and want to hear what matters most to you.
               </p>
               
               <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
+                    <div className="mb-6 sm:mb-8">
                       <label
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-black dark:text-white font-helvetica"
@@ -81,12 +81,12 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Enter your name"
                         required
-                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FFD66B] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FFD66B] dark:focus:shadow-none font-helvetica"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-4 sm:px-6 py-3 text-sm sm:text-base text-body-color outline-none focus:border-[#FFD66B] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FFD66B] dark:focus:shadow-none font-helvetica"
                       />
                     </div>
                   </div>
                   <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
+                    <div className="mb-6 sm:mb-8">
                       <label
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-black dark:text-white font-helvetica"
@@ -100,12 +100,12 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Enter your email"
                         required
-                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FFD66B] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FFD66B] dark:focus:shadow-none font-helvetica"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-4 sm:px-6 py-3 text-sm sm:text-base text-body-color outline-none focus:border-[#FFD66B] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FFD66B] dark:focus:shadow-none font-helvetica"
                       />
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <div className="mb-8">
+                    <div className="mb-6 sm:mb-8">
                       <label
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-black dark:text-white font-helvetica"
@@ -119,7 +119,7 @@ const Contact = () => {
                         rows={5}
                         placeholder="Tell us about your AI search tracking needs, challenges, or feature wishes..."
                         required
-                        className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FFD66B] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FFD66B] dark:focus:shadow-none font-helvetica"
+                        className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-4 sm:px-6 py-3 text-sm sm:text-base text-body-color outline-none focus:border-[#FFD66B] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FFD66B] dark:focus:shadow-none font-helvetica"
                       ></textarea>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={status.loading}
-                      className={`rounded-sm bg-[#FFD66B] px-9 py-4 text-base font-medium text-black shadow-submit duration-300 hover:bg-[#FFD66B]/90 dark:shadow-submit-dark font-helvetica ${
+                      className={`rounded-sm bg-[#FFD66B] px-6 sm:px-9 py-3 sm:py-4 text-sm sm:text-base font-medium text-black shadow-submit duration-300 hover:bg-[#FFD66B]/90 dark:shadow-submit-dark font-helvetica ${
                         status.loading ? 'opacity-70 cursor-not-allowed' : ''
                       }`}
                     >
@@ -135,11 +135,11 @@ const Contact = () => {
                     </button>
                     
                     {status.success && (
-                      <p className="mt-4 text-green-500 font-helvetica">Thank you for sharing your wish! We'll be in touch soon.</p>
+                      <p className="mt-4 text-green-500 font-helvetica text-sm sm:text-base">Thank you for sharing your wish! We'll be in touch soon.</p>
                     )}
                     
                     {status.error && (
-                      <p className="mt-4 text-red-500 font-helvetica">{status.error}</p>
+                      <p className="mt-4 text-red-500 font-helvetica text-sm sm:text-base">{status.error}</p>
                     )}
                   </div>
                 </div>
