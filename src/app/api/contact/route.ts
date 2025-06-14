@@ -1,11 +1,7 @@
 // src/app/api/contact/route.ts
 import { NextResponse } from "next/server";
-import { query } from "@/app/lib/db";
-import { v4 as uuidv4 } from 'uuid';
 
 export async function POST(req: Request) {
-  const CONTACT_SYSTEM_USER_ID = process.env.CONTACT_SYSTEM_USER_ID;
-
   try {
     const { name, email, message } = await req.json();
 
@@ -26,20 +22,14 @@ export async function POST(req: Request) {
       );
     }
 
-    // Format the message to include contact details
-    const formattedDescription = `
-Name: ${name}
-Email: ${email}
-Message: ${message}
-    `.trim();
-
-    // Insert into user_feedback using the system user ID
-    await query(
-      `INSERT INTO user_feedback 
-       (feedback_id, user_id, feedback_type, description)
-       VALUES ($1, $2, $3, $4)`,
-      [uuidv4(), CONTACT_SYSTEM_USER_ID, 'contact', formattedDescription]
-    );
+    // For now, just log the contact form submission
+    // In the future, you can integrate with your preferred email service or database
+    console.log('Contact form submission:', {
+      name,
+      email,
+      message,
+      timestamp: new Date().toISOString()
+    });
 
     return NextResponse.json({
       success: true,

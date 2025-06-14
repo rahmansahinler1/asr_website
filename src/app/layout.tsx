@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import "../styles/index.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 // Initialize Inter font
 const inter = Inter({ subsets: ["latin"] });
@@ -23,11 +23,14 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/asr-favicon/site.webmanifest",
-  themeColor: "#FFD66B",
   other: {
     "msapplication-TileColor": "#FFD66B",
     "msapplication-config": "/asr-favicon/browserconfig.xml",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFD66B",
 };
 
 export default function RootLayout({
