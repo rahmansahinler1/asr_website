@@ -3,8 +3,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import ScrollUp from "@/components/Common/ScrollUp";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AI Search Refs",
-  description: "Learn how AI Search Refs collects, uses, and protects your personal information and data privacy",
+  title: "Privacy Policy | aisearchrefs",
+  description: "Privacy Policy for aisearchrefs platform - Early stage MVP with enterprise-level data protection and comprehensive privacy measures",
 };
 
 const PrivacyPolicyPage = () => {
@@ -13,7 +13,7 @@ const PrivacyPolicyPage = () => {
       <ScrollUp />
       <Breadcrumb
         pageName="Privacy Policy"
-        description="Your privacy matters. Learn how we collect, use, and protect your information"
+        description="Comprehensive privacy protection for our early-stage AI search monitoring platform"
       />
 
       <section className="py-16 md:py-20 lg:py-28 bg-[#F5F5F5]">
@@ -26,50 +26,67 @@ const PrivacyPolicyPage = () => {
               </h1>
               
               <p className="text-xl leading-relaxed text-primary/80 font-helvetica">
-                This Privacy Policy describes how AI Search Refs collects, uses, and protects your personal information when you use our platform and services.
+                Your privacy is fundamental to our mission. Despite being an early-stage MVP, we implement enterprise-level data protection to safeguard your information.
               </p>
               
               <p className="text-base text-gray-600 font-helvetica mt-4">
-                Effective date: January 2025 | Last updated: January 2025
+                Last updated: January 2025
               </p>
             </div>
 
             {/* Content Sections */}
             <div className="space-y-12">
+              {/* Privacy Commitment */}
+              <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
+                <h2 className="mb-4 text-2xl font-bold text-green-800 font-canela">
+                  Our Privacy Commitment
+                </h2>
+                <p className="text-lg leading-relaxed text-green-700 font-helvetica mb-4">
+                  As an early-stage MVP, we understand that trust is earned through action, not promises. We have implemented comprehensive data protection measures that exceed industry standards:
+                </p>
+                <ul className="space-y-2 text-base text-green-700 font-helvetica">
+                  <li>• Dedicated encryption services protect all your data</li>
+                  <li>• We collect only the minimum data necessary to provide our services</li>
+                  <li>• Your data is never sold, shared, or used for advertising</li>
+                  <li>• You maintain complete control over your information</li>
+                  <li>• Transparent practices with no hidden data collection</li>
+                </ul>
+              </div>
+
               {/* Information We Collect */}
               <div>
                 <h2 className="mb-4 text-3xl font-bold text-black font-canela">
                   1. Information We Collect
                 </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  We collect information that you provide directly to us, information we obtain automatically when you use our Services, and information from third-party sources.
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  We collect only the information necessary to provide our AI search monitoring services effectively:
                 </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Information You Provide
-                    </h3>
+                <div className="space-y-6">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Account Information</h3>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Account registration details (name, email, company)</li>
-                      <li>• Payment and billing information</li>
-                      <li>• Keywords and search terms you track</li>
-                      <li>• Customer support communications</li>
-                      <li>• Survey responses and feedback</li>
-                      <li>• Profile settings and preferences</li>
+                      <li>• Email address (for account access and communication)</li>
+                      <li>• Password (encrypted and never stored in plain text)</li>
+                      <li>• Company name and basic profile information (optional)</li>
+                      <li>• Billing information (processed securely through payment providers)</li>
                     </ul>
                   </div>
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Automatically Collected
-                    </h3>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Service Data</h3>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Device and browser information</li>
-                      <li>• IP address and location data</li>
-                      <li>• Usage patterns and interactions</li>
-                      <li>• Performance and error logs</li>
-                      <li>• Cookies and tracking technologies</li>
-                      <li>• Access times and session duration</li>
+                      <li>• Keywords and search terms you want to monitor</li>
+                      <li>• Brand names and competitor information you specify</li>
+                      <li>• Search results and AI platform responses (for analysis)</li>
+                      <li>• Usage patterns and platform interactions (for service improvement)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Technical Information</h3>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• IP address and general location (for security and service delivery)</li>
+                      <li>• Browser type and device information (for compatibility)</li>
+                      <li>• Log files and error reports (for troubleshooting and improvement)</li>
+                      <li>• Cookies and session data (essential for platform functionality)</li>
                     </ul>
                   </div>
                 </div>
@@ -80,127 +97,140 @@ const PrivacyPolicyPage = () => {
                 <h2 className="mb-4 text-3xl font-bold text-black font-canela">
                   2. How We Use Your Information
                 </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  We use the information we collect to provide, maintain, and improve our Services, process transactions, and communicate with you.
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  We use your information exclusively to provide and improve our AI search monitoring services:
                 </p>
-                
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Service Provision
-                    </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Service Delivery</h3>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Deliver AI search tracking and monitoring services</li>
+                      <li>• Monitor AI search platforms for your specified keywords</li>
                       <li>• Generate reports and analytics dashboards</li>
-                      <li>• Process keyword tracking requests</li>
-                      <li>• Provide customer support and technical assistance</li>
+                      <li>• Provide competitor analysis and benchmarking</li>
+                      <li>• Send alerts and notifications about changes</li>
+                      <li>• Enable data export and integration features</li>
                     </ul>
                   </div>
-                  
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Account Management
-                    </h3>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Platform Improvement</h3>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Create and maintain your account</li>
-                      <li>• Process payments and billing</li>
-                      <li>• Send service-related communications</li>
-                      <li>• Verify your identity and prevent fraud</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Service Improvement
-                    </h3>
-                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Analyze usage patterns to improve features</li>
-                      <li>• Develop new products and services</li>
-                      <li>• Conduct research and analytics</li>
-                      <li>• Ensure platform security and stability</li>
+                      <li>• Analyze usage patterns to improve user experience</li>
+                      <li>• Identify and fix technical issues</li>
+                      <li>• Develop new features based on user needs</li>
+                      <li>• Optimize platform performance and reliability</li>
+                      <li>• Enhance security measures and threat detection</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              {/* Information Sharing */}
+              {/* Data Protection & Security */}
               <div>
                 <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  3. Information Sharing and Disclosure
+                  3. Data Protection & Security
                 </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the limited circumstances described below.
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  We implement enterprise-level security measures to protect your data, despite being an early-stage platform:
                 </p>
-                
+                <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                  <h3 className="mb-3 text-xl font-bold text-blue-800 font-helvetica">
+                    Our Security Infrastructure
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="mb-2 text-lg font-bold text-blue-700 font-helvetica">Encryption & Storage</h4>
+                      <ul className="space-y-2 text-base text-blue-700 font-helvetica">
+                        <li>• Dedicated encryption services for all data</li>
+                        <li>• End-to-end encryption for data transmission</li>
+                        <li>• Encrypted database storage with secure keys</li>
+                        <li>• Regular encryption key rotation</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="mb-2 text-lg font-bold text-blue-700 font-helvetica">Access & Monitoring</h4>
+                      <ul className="space-y-2 text-base text-blue-700 font-helvetica">
+                        <li>• Multi-factor authentication requirements</li>
+                        <li>• Limited access policies for team members</li>
+                        <li>• Continuous security monitoring and alerts</li>
+                        <li>• Regular security audits and assessments</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Data Sharing & Third Parties */}
+              <div>
+                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
+                  4. Data Sharing & Third Parties
+                </h2>
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  We do not sell, rent, or share your personal information with third parties for marketing purposes. Limited sharing occurs only in these specific circumstances:
+                </p>
                 <div className="space-y-4">
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Service Providers
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                      We may share information with trusted third-party service providers who assist us in operating our platform, conducting business, or serving our users. These providers are bound by confidentiality agreements and data protection requirements.
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Service Providers</h3>
+                    <p className="text-base text-gray-600 font-helvetica mb-3">
+                      We work with trusted service providers who help us deliver our services:
+                    </p>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• Payment processors (for billing and subscription management)</li>
+                      <li>• Cloud infrastructure providers (for secure hosting and storage)</li>
+                      <li>• Email service providers (for account notifications and support)</li>
+                      <li>• Analytics providers (for platform performance monitoring)</li>
+                    </ul>
+                    <p className="text-sm text-gray-500 font-helvetica mt-3">
+                      All service providers are bound by strict data protection agreements and can only use your data to provide services to us.
                     </p>
                   </div>
-                  
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Legal Requirements
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                      We may disclose your information when required by law, court order, or government request, or when we believe disclosure is necessary to protect our rights, property, or safety, or that of our users or others.
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Legal Requirements</h3>
+                    <p className="text-base text-gray-600 font-helvetica mb-3">
+                      We may disclose information when required by law or to protect our rights:
                     </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Business Transfers
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                      In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred to the acquiring entity, subject to the same privacy protections.
-                    </p>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• In response to valid legal requests or court orders</li>
+                      <li>• To protect against fraud or security threats</li>
+                      <li>• To enforce our terms of service or protect user safety</li>
+                      <li>• In connection with business transfers (with user notification)</li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              {/* Data Security */}
+              {/* Your Privacy Rights */}
               <div>
                 <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  4. Data Security and Protection
+                  5. Your Privacy Rights
                 </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  We implement industry-standard security measures to protect your information against unauthorized access, alteration, disclosure, or destruction.
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  You have comprehensive control over your personal information and how we use it:
                 </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Technical Safeguards
-                    </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Data Access & Control</h3>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• SSL/TLS encryption for data transmission</li>
-                      <li>• AES-256 encryption for data at rest</li>
-                      <li>• Multi-factor authentication options</li>
-                      <li>• Regular security audits and assessments</li>
-                      <li>• Secure cloud infrastructure</li>
+                      <li>• Access all personal data we have about you</li>
+                      <li>• Update or correct your account information</li>
+                      <li>• Export your data in standard formats</li>
+                      <li>• Delete your account and associated data</li>
+                      <li>• Opt out of non-essential communications</li>
                     </ul>
                   </div>
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Operational Safeguards
-                    </h3>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Privacy Preferences</h3>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Limited access on need-to-know basis</li>
-                      <li>• Employee background checks</li>
-                      <li>• Data access logging and monitoring</li>
-                      <li>• Incident response procedures</li>
-                      <li>• Regular staff security training</li>
+                      <li>• Control what data is collected and processed</li>
+                      <li>• Manage notification and communication preferences</li>
+                      <li>• Request restrictions on data processing</li>
+                      <li>• Object to automated decision-making</li>
+                      <li>• Withdraw consent for optional data uses</li>
                     </ul>
                   </div>
                 </div>
-                
-                <div className="mt-6 p-6 bg-blue-50 border-l-4 border-blue-400 rounded">
-                  <p className="text-base text-gray-700 font-helvetica">
-                    <strong>Important:</strong> While we implement robust security measures, no system is completely secure. We cannot guarantee absolute security of your information, but we continuously work to enhance our security practices.
+                <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                  <p className="text-base text-yellow-800 font-helvetica">
+                    <strong>Easy Access:</strong> Most privacy controls are available directly in your account settings. For additional requests, contact our support team and we'll respond within 48 hours.
                   </p>
                 </div>
               </div>
@@ -208,127 +238,118 @@ const PrivacyPolicyPage = () => {
               {/* Data Retention */}
               <div>
                 <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  5. Data Retention
-                </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  We retain your information for as long as necessary to provide our Services and fulfill the purposes outlined in this Privacy Policy.
-                </p>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Account Data
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                      We retain your account information and tracking data for the duration of your subscription and for 30 days after cancellation to allow for potential reactivation. After this period, data is securely deleted.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Legal and Business Records
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                      We may retain certain information for longer periods when required by law, for legal proceedings, or for legitimate business purposes such as fraud prevention and security.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Your Rights */}
-              <div>
-                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  6. Your Privacy Rights
-                </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  Depending on your location and applicable laws, you may have certain rights regarding your personal information.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Access and Control
-                    </h3>
-                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Access your personal information</li>
-                      <li>• Update or correct your data</li>
-                      <li>• Download your data (data portability)</li>
-                      <li>• Delete your account and data</li>
-                      <li>• Restrict processing activities</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">
-                      Communication Preferences
-                    </h3>
-                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Opt out of marketing emails</li>
-                      <li>• Manage notification settings</li>
-                      <li>• Control cookie preferences</li>
-                      <li>• Request information about data use</li>
-                      <li>• File complaints with authorities</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cookies and Tracking */}
-              <div>
-                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  7. Cookies and Tracking Technologies
-                </h2>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-6">
-                  We use cookies and similar technologies to enhance your experience, analyze usage patterns, and improve our Services.
-                </p>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Types of Cookies We Use
-                    </h3>
-                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• <strong>Essential cookies:</strong> Required for basic platform functionality</li>
-                      <li>• <strong>Performance cookies:</strong> Help us understand how users interact with our platform</li>
-                      <li>• <strong>Functional cookies:</strong> Remember your preferences and settings</li>
-                      <li>• <strong>Analytics cookies:</strong> Provide insights into platform usage and performance</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-black font-helvetica">
-                      Managing Cookies
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                      You can control cookies through your browser settings. However, disabling certain cookies may limit your ability to use some features of our platform.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* International Transfers */}
-              <div>
-                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  8. International Data Transfers
+                  6. Data Retention
                 </h2>
                 <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
-                  AI Search Refs operates globally, and your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for international transfers.
+                  We retain your data only as long as necessary to provide our services and comply with legal obligations:
                 </p>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica">
-                  When transferring data internationally, we use mechanisms such as standard contractual clauses, adequacy decisions, or other legally approved transfer mechanisms to protect your information.
+                <div className="bg-white p-6 rounded-lg border border-gray-200">
+                  <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Retention Periods</h3>
+                  <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                    <li>• Account information: Retained while your account is active</li>
+                    <li>• Service data: Retained for the duration of your subscription plus 30 days</li>
+                    <li>• Billing information: Retained for 7 years for tax and legal compliance</li>
+                    <li>• Technical logs: Automatically deleted after 90 days</li>
+                    <li>• Support communications: Retained for 2 years for service improvement</li>
+                  </ul>
+                  <p className="text-sm text-gray-500 font-helvetica mt-4">
+                    When you delete your account, we immediately begin the data deletion process. Some information may be retained in encrypted backups for up to 30 days before permanent deletion.
+                  </p>
+                </div>
+              </div>
+
+              {/* International Data Transfers */}
+              <div>
+                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
+                  7. International Data Transfers
+                </h2>
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  As a global service, your data may be processed in different countries. We ensure appropriate protections are in place:
+                </p>
+                <div className="bg-white p-6 rounded-lg border border-gray-200">
+                  <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Transfer Safeguards</h3>
+                  <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                    <li>• All international transfers use standard contractual clauses</li>
+                    <li>• Data is encrypted during transmission and storage</li>
+                    <li>• We work only with providers that meet international privacy standards</li>
+                    <li>• Regular assessments ensure ongoing protection adequacy</li>
+                    <li>• Users can request information about where their data is processed</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Cookies & Tracking */}
+              <div>
+                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
+                  8. Cookies & Tracking
+                </h2>
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  We use cookies and similar technologies to provide and improve our services:
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Essential Cookies</h3>
+                    <p className="text-base text-gray-600 font-helvetica mb-3">
+                      Required for platform functionality:
+                    </p>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• Authentication and session management</li>
+                      <li>• Security and fraud prevention</li>
+                      <li>• Platform preferences and settings</li>
+                      <li>• Load balancing and performance</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Analytics Cookies</h3>
+                    <p className="text-base text-gray-600 font-helvetica mb-3">
+                      Help us improve our services (optional):
+                    </p>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• Usage patterns and feature adoption</li>
+                      <li>• Performance monitoring and optimization</li>
+                      <li>• Error tracking and debugging</li>
+                      <li>• User experience improvements</li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="text-base text-gray-600 font-helvetica mt-4">
+                  You can control cookie preferences through your browser settings or our cookie management tools in your account.
                 </p>
               </div>
 
-              {/* Updates to Privacy Policy */}
+              {/* Children's Privacy */}
               <div>
                 <h2 className="mb-4 text-3xl font-bold text-black font-canela">
-                  9. Updates to This Privacy Policy
+                  9. Children's Privacy
                 </h2>
                 <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
-                  We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors.
+                  Our services are designed for business use and are not intended for children under 18. We do not knowingly collect personal information from children.
                 </p>
-                <p className="text-lg leading-relaxed text-gray-600 font-helvetica">
-                  When we make material changes, we will notify you by email or through our platform. We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+                <div className="bg-white p-6 rounded-lg border border-gray-200">
+                  <p className="text-base text-gray-600 font-helvetica">
+                    If we become aware that we have collected personal information from a child under 18, we will take immediate steps to delete that information. Parents or guardians who believe their child has provided us with personal information should contact us immediately.
+                  </p>
+                </div>
+              </div>
+
+              {/* Changes to Privacy Policy */}
+              <div>
+                <h2 className="mb-4 text-3xl font-bold text-black font-canela">
+                  10. Changes to This Privacy Policy
+                </h2>
+                <p className="text-lg leading-relaxed text-gray-600 font-helvetica mb-4">
+                  As we develop our platform, we may need to update this privacy policy. We are committed to transparency in any changes:
                 </p>
+                <div className="bg-white p-6 rounded-lg border border-gray-200">
+                  <h3 className="mb-3 text-xl font-bold text-black font-helvetica">Our Update Process</h3>
+                  <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                    <li>• We will notify users of significant changes via email</li>
+                    <li>• Updated policies will be posted on our website with revision dates</li>
+                    <li>• Users will have time to review changes before they take effect</li>
+                    <li>• We welcome feedback and questions about policy updates</li>
+                    <li>• Users who disagree with changes may cancel their service</li>
+                  </ul>
+                </div>
               </div>
 
               {/* Contact Section */}
@@ -337,9 +358,27 @@ const PrivacyPolicyPage = () => {
                   Privacy Questions or Concerns?
                 </h3>
                 <p className="text-lg text-gray-600 font-helvetica mb-6">
-                  If you have questions about this Privacy Policy, want to exercise your privacy rights, or have concerns about how we handle your information, please contact our privacy team.
+                  We take your privacy seriously and are here to address any questions or concerns. Our team is committed to transparency and will respond to privacy inquiries within 48 hours.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="mb-2 text-lg font-bold text-black font-helvetica">Contact Methods</h4>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• Email: privacy@aisearchrefs.com</li>
+                      <li>• Support chat through your account</li>
+                      <li>• Contact form on our website</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="mb-2 text-lg font-bold text-black font-helvetica">What to Include</h4>
+                    <ul className="space-y-2 text-base text-gray-600 font-helvetica">
+                      <li>• Your account email address</li>
+                      <li>• Specific privacy concern or request</li>
+                      <li>• Any relevant details or context</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-4 mt-6">
                   <a 
                     href="/contact" 
                     className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 font-helvetica"

@@ -36,7 +36,7 @@ const FAQPage = () => {
                   className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
                 >
                   <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
-                    What is AI Search Refs?
+                    What is aisearchrefs?
                   </h3>
                 </Link>
 
@@ -50,11 +50,11 @@ const FAQPage = () => {
                 </Link>
 
                 <Link 
-                  href="/faq/getting-started-guide" 
+                  href="/faq/how-do-i-know-this-is-working" 
                   className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
                 >
                   <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
-                    How do I get started with AI SEO tracking?
+                    How do I know this is working?
                   </h3>
                 </Link>
               </div>
@@ -266,7 +266,7 @@ const FAQPage = () => {
                 </Link>
 
                 <Link 
-                  href="/faq/custom-solutions" 
+                  href="/faq/custom-enterprise-solutions" 
                   className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 hover:border-[#FFD66B]/50"
                 >
                   <h3 className="text-lg font-semibold text-black hover:text-[#FFD66B] transition-colors duration-300 font-helvetica">
@@ -282,7 +282,7 @@ const FAQPage = () => {
                 Still have questions?
               </h3>
               <p className="text-lg text-gray-600 font-helvetica mb-6">
-                Our AI search experts are ready to help you optimize your brand's visibility in AI search engines. Get personalized assistance for your specific use case.
+                We are ready to help you optimize your brand's visibility in AI search engines. Get personalized assistance for your specific use case.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 

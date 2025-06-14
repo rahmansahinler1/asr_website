@@ -7,8 +7,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "aisearchrefs.com: AI Monitoring & Competitor Analysis",
-  description: "Stop losing AI web search traffic. Track brand mentions across all AI platforms and see how you compare to competitors.",
+  title: "AI Web Search Monitoring",
+  description: "Stop losing AI web search traffic. Track brand mentions across all AI platforms.",
 };
 
 export default async function Home() {

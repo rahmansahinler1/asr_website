@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import blogData from "@/components/Blog/blogData";
 import Image from "next/image";
+import Link from "next/link";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const SingleBlogPage = ({ params }: { params: { slug: string } }) => {
   const blog = blogData.find((blog) => blog.slug === params.slug);
@@ -16,8 +18,10 @@ const SingleBlogPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      {/* Navigation background - Primary color section */}
-      <section className="h-[100px] bg-primary"></section>
+      <Breadcrumb
+        pageName={blog.title}
+        description={blog.paragraph}
+      />
       
       {/* Content section */}
       <section className="pb-[120px] pt-[50px] bg-[#F5F5F5]">
@@ -69,6 +73,19 @@ const SingleBlogPage = ({ params }: { params: { slug: string } }) => {
                   </p>
                 </div>
               ))}
+
+              {/* Back to Blogs */}
+              <div className="mt-12 pt-8 border-t border-gray-200">
+                <Link 
+                  href="/blogs" 
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-helvetica font-semibold"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Back to all blogs
+                </Link>
+              </div>
             </div>
           </div>
         </div>

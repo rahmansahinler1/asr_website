@@ -3,16 +3,16 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "What is AI Search Refs? - FAQ | AI Search Refs",
-  description: "Learn about AI Search Refs, our comprehensive platform for tracking and monitoring brand visibility in AI search engines",
+  title: "What is aisearchrefs? - FAQ | aisearchrefs",
+  description: "Learn about aisearchrefs, our AI monitoring platform that measures and scores brand visibility across AI search engines",
 };
 
 const WhatIsAISearchRefsPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="What is AI Search Refs?"
-        description="Understanding our AI search tracking and brand monitoring platform"
+        pageName="What is aisearchrefs?"
+        description="Understanding our AI traffic measurement and scoring platform"
       />
 
       <section className="py-16 md:py-20 lg:py-28 bg-[#F5F5F5]">
@@ -21,7 +21,7 @@ const WhatIsAISearchRefsPage = () => {
             {/* Question */}
             <div className="mb-8">
               <h1 className="mb-6 text-4xl font-bold leading-tight text-primary font-canela">
-                What is <span className="text-[#FFD66B]">AI Search Refs</span>?
+                What is <span className="text-[#FFD66B]">aisearchrefs</span>?
               </h1>
             </div>
 
@@ -29,30 +29,30 @@ const WhatIsAISearchRefsPage = () => {
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-gray-600 font-helvetica">
-                  AI Search Refs is a comprehensive platform designed to help businesses track and monitor their brand visibility across AI-powered search engines. As AI search becomes increasingly important for online discovery, our platform provides the tools you need to understand, track, and optimize your brand's presence in this new landscape.
+                  Our platform aisearchrefs is an AI monitoring solution that measures and scores brand visibility across AI search engines. We track how often your brand appears in ChatGPT, Claude, Gemini, and other AI platforms, providing data-driven insights into your AI web search performance without offering optimization or content services.
                 </p>
 
                 <div>
                   <h3 className="mb-4 text-xl font-bold text-black font-helvetica">
-                    Key Features:
+                    What We Measure:
                   </h3>
                   <ul className="space-y-3 text-base text-gray-600 font-helvetica">
-                    <li>• <strong>AI Search Tracking:</strong> Monitor how your brand appears in AI search results across multiple platforms</li>
-                    <li>• <strong>Brand Visibility Analytics:</strong> Get detailed insights into your brand's performance and visibility metrics</li>
-                    <li>• <strong>Competitor Analysis:</strong> Compare your brand's AI search performance against competitors</li>
-                    <li>• <strong>Keyword Monitoring:</strong> Track specific keywords and phrases related to your brand or industry</li>
-                    <li>• <strong>Real-time Alerts:</strong> Receive notifications when your brand is mentioned or when changes occur</li>
-                    <li>• <strong>Performance Dashboards:</strong> Access comprehensive reporting and analytics tools</li>
+                    <li>• <strong>AI Traffic Scoring:</strong> Quantify your brand's visibility across AI platforms with precise metrics</li>
+                    <li>• <strong>AI Monitoring:</strong> Track mention frequency and context positioning in AI responses</li>
+                    <li>• <strong>AI Competitor Analysis:</strong> Benchmark your performance against rivals in AI search results</li>
+                    <li>• <strong>Platform Coverage:</strong> Measure visibility across ChatGPT, Claude, Gemini, Perplexity, and emerging AI engines</li>
+                    <li>• <strong>Performance Scoring:</strong> Receive standardized scores that quantify your AI search presence</li>
+                    <li>• <strong>Data Analytics:</strong> Access comprehensive measurement dashboards and trend analysis</li>
                   </ul>
                 </div>
 
                 <div>
                   <h3 className="mb-4 text-xl font-bold text-black font-helvetica">
-                    Why AI Search Refs?
+                    Why Choose aisearchrefs?
                   </h3>
-                  <p className="text-base leading-relaxed text-gray-600 font-helvetica">
-                    As AI search engines like ChatGPT, Claude, Perplexity, and others reshape how people discover information, traditional SEO strategies need to evolve. AI Search Refs bridges this gap by providing specialized tools and insights for the AI search ecosystem, helping businesses maintain and improve their digital presence in this new era of search.
-                  </p>
+                                      <p className="text-base leading-relaxed text-gray-600 font-helvetica">
+                      Traditional analytics cannot track AI-driven discovery. When customers find brands through AI conversations, this traffic appears as direct visits with no attribution data. Our monitoring platform aisearchrefs fills this measurement gap by systematically tracking and scoring your AI web search visibility, providing the missing intelligence that conventional tools cannot capture.
+                    </p>
                 </div>
 
                 <div>
@@ -61,16 +61,16 @@ const WhatIsAISearchRefsPage = () => {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Digital marketing teams</li>
-                      <li>• SEO professionals</li>
-                      <li>• Brand managers</li>
-                      <li>• Content strategists</li>
+                      <li>• Brand managers tracking AI visibility</li>
+                      <li>• Marketing teams measuring AI traffic</li>
+                      <li>• Competitive intelligence analysts</li>
+                      <li>• Digital strategists</li>
                     </ul>
                     <ul className="space-y-2 text-base text-gray-600 font-helvetica">
-                      <li>• Business owners</li>
-                      <li>• Marketing agencies</li>
-                      <li>• Enterprise organizations</li>
-                      <li>• Growth teams</li>
+                      <li>• Performance measurement teams</li>
+                      <li>• Business intelligence professionals</li>
+                      <li>• Market research specialists</li>
+                      <li>• Data-driven marketers</li>
                     </ul>
                   </div>
                 </div>

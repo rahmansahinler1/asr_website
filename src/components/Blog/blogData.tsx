@@ -43,7 +43,7 @@ const blogData: Blog[] = [
   {
     id: 2,
     title: "Why Smart Brands Are Tracking AI Traffic (And You Should Too)",
-    paragraph: "Explore the proven benefits of AI monitoring with real case studies and data insights. See how brands are gaining competitive advantages",
+    paragraph: "Explore the proven benefits of AI monitoring with real case studies and data insights. See how brands are gaining competitive advantages.",
     previewImage: "/images/blog/llm-seo.png",
     fullImage: "/images/blog/llm-seo-full.jpg",
     slug: "why-ai-search-tracking-works",
@@ -82,7 +82,7 @@ const blogData: Blog[] = [
   {
     id: 3,
     title: "AI Competitor Analysis: How to Track Rivals in ChatGPT and Claude",
-    paragraph: "Master AI competitor analysis with proven strategies for tracking rival brand mentions across AI platforms. Learn how to benchmark your performance, identify gaps, and gain competitive intelligence that traditional tools can't provide.",
+    paragraph: "Master AI competitor analysis with proven strategies for tracking rival brand mentions across AI platforms. Learn how to benchmark your performance.",
     previewImage: "/images/blog/ai-competitor-analysis.png",
     fullImage: "/images/blog/ai-competitor-analysis-full.jpg",
     slug: "ai-competitor-analysis",
