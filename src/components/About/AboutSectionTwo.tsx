@@ -5,29 +5,16 @@ const AboutSectionTwo = () => {
     <section className="py-12 md:py-16 lg:py-20 bg-[#F5F5F5]">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
-          {/* Left Placeholder Image */}
+          {/* Left Data Dashboard Image */}
           <div className="w-full px-4 lg:w-1/2">
             <div className="flex items-center justify-center">
-              <div className="h-[350px] w-full max-w-[450px] rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mb-4 h-16 w-16 mx-auto rounded-full bg-gray-200 flex items-center justify-center">
-                    <svg 
-                      className="h-8 w-8 text-gray-400" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-gray-500 text-sm font-medium">Image Placeholder</p>
-                  <p className="text-gray-400 text-xs mt-1">450 x 350</p>
-                </div>
+              <div className="w-full max-w-[600px] flex items-center justify-center">
+                <img
+                  src="/images/landing_about/data-dashboard.webp"
+                  alt="Data insights dashboard showing AI search analytics"
+                  className="w-full h-auto max-w-[600px]"
+                  style={{ maxHeight: '400px' }}
+                />
               </div>
             </div>
           </div>
