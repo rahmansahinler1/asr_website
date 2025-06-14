@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Search Refs - Track Your Brand Mentions in AI Search Results",
+  title: "aisearchrefs - Track Your Brand Mentions in AI Search Results",
   description: "Monitor and track your brand mentions across AI search engines and chatbots. Get insights into how AI mentions your brand in search results.",
   keywords: "AI search tracking, brand mentions, AI monitoring, search visibility, brand tracking, AI SEO",
   icons: {
