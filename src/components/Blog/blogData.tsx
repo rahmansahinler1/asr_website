@@ -5,8 +5,8 @@ const blogData: Blog[] = [
     id: 1,
     title: "AI Web Search Explained: How LLMs are Changing Discovery",
     paragraph: "Understanding how AI web search platforms operate reveals why traditional SEO strategies fail. Learn the technical architecture driving this transformation.",
-    previewImage: "/images/blog/ai-seo-guide.png",
-    fullImage: "/images/blog/ai-seo-guide-full.jpg",
+    previewImage: "/images/blog/ai-web-search-small.webp",
+    fullImage: "/images/blog/ai-web-search-medium.webp",
     slug: "ai-web-search",
     introText: "AI web search represents a fundamental shift from keyword-based retrieval to conversational intelligence. LLMs don't just find information—they understand context, synthesize knowledge, and deliver insights through natural dialogue. This transformation renders traditional SEO obsolete.",
     sections: [
@@ -44,8 +44,8 @@ const blogData: Blog[] = [
     id: 2,
     title: "Why Smart Brands Are Tracking AI Traffic (And You Should Too)",
     paragraph: "Explore the proven benefits of AI monitoring with real case studies and data insights. See how brands are gaining competitive advantages.",
-    previewImage: "/images/blog/llm-seo.png",
-    fullImage: "/images/blog/llm-seo-full.jpg",
+    previewImage: "/images/blog/smart-brands-small.webp",
+    fullImage: "/images/blog/smart-brands-medium.webp",
     slug: "why-ai-search-tracking-works",
     introText: "After analyzing thousands of AI search results and tracking brand performance across platforms, we've identified clear patterns showing why AI monitoring delivers measurable business value. Here's the evidence-based case for tracking your AI visibility.",
     sections: [
@@ -83,8 +83,8 @@ const blogData: Blog[] = [
     id: 3,
     title: "AI Competitor Analysis: How to Track Rivals in ChatGPT and Claude",
     paragraph: "Master AI competitor analysis with proven strategies for tracking rival brand mentions across AI platforms. Learn how to benchmark your performance.",
-    previewImage: "/images/blog/ai-competitor-analysis.png",
-    fullImage: "/images/blog/ai-competitor-analysis-full.jpg",
+    previewImage: "/images/blog/ai-race-small.webp",
+    fullImage: "/images/blog/ai-race-medium.webp",
     slug: "ai-competitor-analysis",
     introText: "Traditional competitive intelligence tools can't track how your rivals perform in AI search results. We've developed systematic approaches for monitoring competitor mentions across ChatGPT, Claude, and other platforms to give you actionable competitive insights.",
     sections: [

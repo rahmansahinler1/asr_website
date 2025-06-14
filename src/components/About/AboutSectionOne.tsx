@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AIMonitoringDiagram from "./AIMonitoringDiagram";
 
 const checkIcon = (
   <svg width="12" height="12" viewBox="0 0 20 20" className="fill-current">
@@ -59,11 +58,17 @@ const AboutSectionOne = () => {
             </div>
           </div>
 
-          {/* Right Content - AI Monitoring Diagram */}
+          {/* Right Content - AI Monitoring Image */}
           <div className="w-full px-4 lg:w-1/2">
             <div className="flex items-center justify-center">
               <div className="w-full max-w-[450px]">
-                <AIMonitoringDiagram />
+                <Image
+                  src="/images/landing_about/chatgpt_answer.webp"
+                  alt="AI search monitoring visualization showing brand mentions across AI platforms"
+                  width={450}
+                  height={300}
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </div>
