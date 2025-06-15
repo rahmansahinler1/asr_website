@@ -2,3 +2,6 @@ node_modules
 .next/
 .cursor/
 .vscode/
+
+# Environment variables
+.env*.local

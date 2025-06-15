@@ -1,12 +1,15 @@
 import { Pool } from 'pg';
 
+// Determine the environment
+const isProduction = process.env.NODE_ENV === 'production';
+
 // Database configuration
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
   port: parseInt(process.env.DB_PORT || '5432'),
-  database: process.env.DB_NAME || 'asr_dev',
-  user: process.env.DB_USER || 'karstaag',
-  password: process.env.DB_PASSWORD || '199961',
+  database: isProduction ? 'asr_prod' : 'asr_dev',
+  user: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASSWORD || '',
   // Additional configuration for better connection handling
   max: 20, // Maximum number of clients in the pool
   idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
@@ -21,6 +24,9 @@ pool.on('error', (err) => {
   console.error('Unexpected error on idle client', err);
   process.exit(-1);
 });
+
+// Log the database being used (helpful for debugging)
+console.log(`Connected to database: ${dbConfig.database} (${isProduction ? 'production' : 'development'} mode)`);
 
 // Database query function
 export const query = async (text: string, params?: any[]) => {
