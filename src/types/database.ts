@@ -1,14 +1,16 @@
 export interface WaitlistInfo {
-  user_email: string;
-  created_at: Date;
+  id?: number;
+  email: string;
+  created_at?: string;
 }
 
 export interface WishlistInfo {
-  user_email: string;
+  id?: number;
+  email: string;
   user_name: string;
   user_surname: string;
   user_message: string;
-  created_at: Date;
+  created_at?: string;
 }
 
 export interface ApiResponse<T = any> {

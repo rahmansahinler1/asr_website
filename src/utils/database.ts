@@ -1,68 +1,86 @@
-import { Pool } from 'pg';
+import { createClient } from '@supabase/supabase-js';
 
-// Determine the environment
-const isProduction = process.env.NODE_ENV === 'production';
+// Supabase configuration
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
-// Database configuration
-const dbConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
-  database: isProduction ? 'asr_prod' : 'asr_dev',
-  user: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || '',
-  // Additional configuration for better connection handling
-  max: 20, // Maximum number of clients in the pool
-  idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-  connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
-};
-
-// Create a connection pool
-const pool = new Pool(dbConfig);
-
-// Handle pool errors
-pool.on('error', (err) => {
-  console.error('Unexpected error on idle client', err);
-  process.exit(-1);
-});
-
-// Log the database being used (helpful for debugging)
-console.log(`Connected to database: ${dbConfig.database} (${isProduction ? 'production' : 'development'} mode)`);
-
-// Database query function
-export const query = async (text: string, params?: any[]) => {
-  const client = await pool.connect();
-  try {
-    const result = await client.query(text, params);
-    return result;
-  } catch (error) {
-    console.error('Database query error:', error);
-    throw error;
-  } finally {
-    client.release();
-  }
-};
+// Create Supabase client
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // Specific functions for our tables
 export const addToWaitlist = async (email: string) => {
-  const queryText = 'INSERT INTO waitlist_info (user_email) VALUES ($1) ON CONFLICT (user_email) DO NOTHING RETURNING *';
-  const result = await query(queryText, [email]);
-  return result.rows[0];
+  try {
+    const { error } = await supabase
+      .from('waitlist_info')
+      .insert([{ email }]);
+
+    if (error) {
+      // Check if it's a duplicate email error
+      if (error.code === '23505' || error.message.includes('duplicate')) {
+        return null; // Indicates duplicate, handle in API
+      }
+      throw error;
+    }
+
+    // Return a minimal response since we can't get the actual data
+    return { email, created_at: new Date().toISOString() };
+  } catch (error) {
+    console.error('Error adding to waitlist:', error);
+    throw error;
+  }
 };
 
 export const addToWishlist = async (email: string, name: string, surname: string, message: string) => {
-  const queryText = 'INSERT INTO wishlist_info (user_email, user_name, user_surname, user_message) VALUES ($1, $2, $3, $4) RETURNING *';
-  const result = await query(queryText, [email, name, surname, message]);
-  return result.rows[0];
+  try {
+    const { error } = await supabase
+      .from('wishlist_info')
+      .insert([{ 
+        email: email,
+        user_name: name, 
+        user_surname: surname, 
+        user_message: message 
+      }]);
+
+    if (error) {
+      throw error;
+    }
+
+    // Return a minimal response since we can't get the actual data
+    return { 
+      email, 
+      user_name: name, 
+      user_surname: surname, 
+      user_message: message,
+      created_at: new Date().toISOString() 
+    };
+  } catch (error) {
+    console.error('Error adding to wishlist:', error);
+    throw error;
+  }
 };
 
 // Check if email exists in waitlist
 export const checkEmailInWaitlist = async (email: string) => {
-  const queryText = 'SELECT user_email FROM waitlist_info WHERE user_email = $1';
-  const result = await query(queryText, [email]);
-  return result.rows.length > 0;
+  try {
+    const { data, error } = await supabase
+      .from('waitlist_info')
+      .select('email')
+      .eq('email', email)
+      .single();
+
+    if (error && error.code !== 'PGRST116') { // PGRST116 is "not found" error
+      throw error;
+    }
+
+    return !!data; // Returns true if email exists, false otherwise
+  } catch (error) {
+    console.error('Error checking email in waitlist:', error);
+    throw error;
+  }
 };
 
 // Close the pool (useful for graceful shutdown)
 export const closePool = async () => {
-  await pool.end();
+  // Supabase does not have a close method like PostgreSQL
+  // This function is kept for consistency with the original code
 }; 

@@ -1,30 +1,29 @@
 # ASR Website Database Integration
 
-This document explains the database integration setup for the ASR website.
+This document explains the database integration setup for the ASR website using Supabase.
 
 ## Database Schema
 
-The website connects to a PostgreSQL database with the following tables:
+The website connects to a Supabase PostgreSQL database with the following tables:
 
 ### `waitlist_info`
-- **user_email** (VARCHAR(100), UNIQUE, NOT NULL) - Email address of the user
-- **created_at** (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP) - When the user joined the waitlist
+- **id** (SMALLINT, GENERATED ALWAYS AS IDENTITY, PRIMARY KEY) - Auto-generated unique identifier
+- **email** (TEXT) - Email address of the user
+- **created_at** (TIME WITHOUT TIME ZONE, DEFAULT now()) - When the user joined the waitlist
 
 ### `wishlist_info`
-- **user_email** (VARCHAR(100), NOT NULL) - Email address of the user
-- **user_name** (VARCHAR(100), NOT NULL) - First name of the user
-- **user_surname** (VARCHAR(100), NOT NULL) - Last name of the user
-- **user_message** (VARCHAR(1000), NOT NULL) - The user's message/wish
-- **created_at** (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP) - When the message was submitted
+- **id** (SMALLINT, GENERATED ALWAYS AS IDENTITY, PRIMARY KEY) - Auto-generated unique identifier
+- **email** (TEXT, NOT NULL) - Email address of the user
+- **user_name** (VARCHAR, NOT NULL) - First name of the user
+- **user_surname** (VARCHAR) - Last name of the user
+- **user_message** (VARCHAR, NOT NULL) - The user's message/wish
+- **created_at** (TIME WITHOUT TIME ZONE, DEFAULT now()) - When the message was submitted
 
 ## Database Connection
 
-The website connects directly to the PostgreSQL database using the following configuration:
-- **Host**: localhost
-- **Port**: 5432
-- **Database**: asr_dev
-- **User**: karstaag
-- **Password**: 199961
+The website connects to Supabase using the Supabase JavaScript client with the following environment variables:
+- **NEXT_PUBLIC_SUPABASE_URL** - Your Supabase project URL
+- **NEXT_PUBLIC_SUPABASE_ANON_KEY** - Your Supabase anonymous/public key
 
 ## API Endpoints
 
@@ -87,13 +86,13 @@ Handles form submissions from the Contact section.
 
 ## Files Modified/Created
 
-- `src/utils/database.ts` - Database connection utilities
+- `src/utils/database.ts` - Supabase database connection utilities
 - `src/app/api/waitlist/route.ts` - Waitlist API endpoint
-- `src/app/api/contact/route.ts` - Updated contact API endpoint
-- `src/components/Hero/index.tsx` - Updated with waitlist functionality
-- `src/components/Contact/index.tsx` - Enhanced error handling
+- `src/app/api/contact/route.ts` - Contact API endpoint
+- `src/components/Hero/index.tsx` - Waitlist functionality
+- `src/components/Contact/index.tsx` - Contact form
 - `src/types/database.ts` - TypeScript type definitions
-- `package.json` - Added `pg` and `@types/pg` dependencies
+- `package.json` - Updated with Supabase dependencies (removed pg dependencies)
 
 ## Testing
 
@@ -101,16 +100,32 @@ All functionality has been tested with TypeScript compilation and Next.js build 
 
 ## Environment Variables
 
-The database connection can be configured using environment variables:
-- `DB_HOST` (default: localhost)
-- `DB_PORT` (default: 5432)
-- `DB_NAME` (default: asr_dev)
-- `DB_USER` (default: karstaag)
-- `DB_PASSWORD` (default: 199961)
+The following environment variables are required:
+- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous/public key
 
 ## Security Considerations
 
-- Database credentials are currently hardcoded but can be moved to environment variables
+- Uses Supabase Row Level Security (RLS) for data protection
+- Environment variables for secure configuration
 - Input validation is implemented for all forms
-- SQL injection protection through parameterized queries
-- Connection pooling for better performance and resource management 
+- SQL injection protection through Supabase's built-in parameterized queries
+- Automatic connection management through Supabase client
+
+## Important Notes
+
+⚠️ **Schema Issue**: The `wishlist_info` table in your provided schema is missing the `user_email` field. You need to add this field to your Supabase table:
+
+```sql
+ALTER TABLE wishlist_info ADD COLUMN user_email VARCHAR;
+```
+
+Or update the contact form to not collect email addresses if you prefer to keep the current schema.
+
+## Migration from PostgreSQL
+
+This setup has been migrated from PostgreSQL to Supabase. The main changes include:
+- Replaced `pg` client with Supabase client
+- Updated field names to match new schema (both tables now use `email`)
+- Added auto-generated `id` fields as primary keys
+- Changed timestamp handling to match Supabase format 

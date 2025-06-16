@@ -36,7 +36,7 @@ export async function POST(req: Request) {
         success: true,
         message: 'Thank you for sharing your wish! We will be in touch soon.',
         data: {
-          email: result.user_email,
+          email: result.email,
           name: result.user_name,
           surname: result.user_surname,
           createdAt: result.created_at

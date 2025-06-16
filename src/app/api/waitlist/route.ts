@@ -40,12 +40,12 @@ export async function POST(req: Request) {
         success: true,
         message: 'Thank you! We will notify you when aisearchrefs launches.',
         data: {
-          email: result.user_email,
+          email: result.email,
           createdAt: result.created_at
         }
       });
     } else {
-      // This case handles when ON CONFLICT DO NOTHING returns no rows
+      // This case handles when duplicate email is detected
       return NextResponse.json({
         success: true,
         message: 'You are already on the waitlist! We will notify you when aisearchrefs launches.',
