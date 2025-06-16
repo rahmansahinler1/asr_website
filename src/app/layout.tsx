@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { Providers } from "./providers";
 import "../styles/index.css";
 import type { Metadata, Viewport } from "next";
@@ -41,6 +42,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`bg-primary dark:bg-black ${inter.className}`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FQHK4HXGYY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FQHK4HXGYY');
+          `}
+        </Script>
+
+        {/* Ahrefs Web Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="Fw7tVbxq+Ecbgr4/6H33jQ"
+          strategy="afterInteractive"
+        />
+        
         <Providers>
           {/* Main content */}
           <main className="min-h-screen">
